@@ -742,7 +742,7 @@ body .contentArrow .arrow:hover {
 /*MIXINS*/
 .myServ {
   /* background: radial-gradient(circle at 15% -5%, $secondary-hover 0,8% , $dark-1-color 35%);*/
-  height: 100vh;
+  /*height: 100vh;*/
   width: 100%;
   padding: 130px 0 130px 0;
   display: flex;
@@ -761,6 +761,7 @@ body .contentArrow .arrow:hover {
   color: #f1f1f1;
   font-size: 50px;
   font-weight: 600;
+  font-size: 24px;
 }
 .myServ .subArt1 .secciones1 {
   display: flex;
@@ -772,12 +773,12 @@ body .contentArrow .arrow:hover {
   padding: 50px 0 50px 0;
 }
 .myServ .subArt1 .secciones1 .btnSec {
-  width: 200px;
+  width: 120px;
   background-color: #555555;
   padding: 15px 25px 15px 25px;
   border-radius: 50px;
   font-weight: 600;
-  font-size: 22px;
+  font-size: 14px;
   text-align: center;
 }
 .myServ .subArt1 .secciones1 .btnSec a {
@@ -792,7 +793,7 @@ body .contentArrow .arrow:hover {
 }
 .myServ .subArt2 {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
@@ -805,8 +806,8 @@ body .contentArrow .arrow:hover {
   align-items: center;
   border: #555555 solid 2px;
   border-radius: 10px;
-  width: 400px;
-  height: 450px;
+  width: 350px;
+  height: 350px;
   padding: 20px;
 }
 .myServ .subArt2 .myCards h3 {
@@ -828,7 +829,7 @@ body .contentArrow .arrow:hover {
 .pricing {
   background: radial-gradient(circle at center center, #ffe203 0%, #242424 35%);
   width: 100%;
-  height: 100vh;
+  /*height: 100vh;*/
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -846,10 +847,11 @@ body .contentArrow .arrow:hover {
   color: #f1f1f1;
   font-size: 50px;
   font-weight: 600;
+  font-size: 24px;
 }
 .pricing .planes {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   gap: 20px;
@@ -859,6 +861,7 @@ body .contentArrow .arrow:hover {
 }
 .pricing .planes .plan {
   background-color: #27292d;
+  width: fit-content;
   height: 550px;
   text-align: center;
   display: flex;
@@ -868,10 +871,10 @@ body .contentArrow .arrow:hover {
   color: #f1f1f1;
 }
 .pricing .planes .plan h4 {
-  font-size: 18px;
+  font-size: 14px;
 }
 .pricing .planes .plan p {
-  font-size: 18px;
+  font-size: 14px;
   width: 70%;
   padding-bottom: 30px;
   border-bottom: #59c378 solid 1px;
@@ -904,6 +907,175 @@ body .contentArrow .arrow:hover {
   color: #f1f1f1;
 }
 
+/*Media Queries 1200px*/
+@media (min-width: 1200px) {
+  body {
+    /*pricing*/
+  }
+  body .myServ {
+    /* background: radial-gradient(circle at 15% -5%, $secondary-hover 0,8% , $dark-1-color 35%);*/
+    height: 100vh;
+    width: 100%;
+    padding: 130px 0 130px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  body .myServ .subArt1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  body .myServ .subArt1 .title2 {
+    color: #f1f1f1;
+    font-size: 50px;
+    font-weight: 600;
+    font-size: 24px;
+  }
+  body .myServ .subArt1 .secciones1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    padding: 50px 0 50px 0;
+  }
+  body .myServ .subArt1 .secciones1 .btnSec {
+    width: 200px;
+    background-color: #555555;
+    padding: 15px 25px 15px 25px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 22px;
+    text-align: center;
+  }
+  body .myServ .subArt1 .secciones1 .btnSec a {
+    color: #f1f1f1;
+  }
+  body .myServ .subArt1 .secciones1 .btnactivo {
+    border: #555555 solid 3px;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  body .myServ .subArt1 .secciones1 .btnactivo a {
+    color: #ffe600;
+  }
+  body .myServ .subArt2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+  }
+  body .myServ .subArt2 .myCards {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border: #555555 solid 2px;
+    border-radius: 10px;
+    width: 400px;
+    height: 450px;
+    padding: 20px;
+  }
+  body .myServ .subArt2 .myCards h3 {
+    color: #f1f1f1;
+    font-weight: 600;
+  }
+  body .myServ .subArt2 .myCards .divImgArt {
+    width: fit-content;
+    background-color: #555555;
+    border-radius: 50%;
+    padding: 30px;
+  }
+  body .myServ .subArt2 .myCards .imgArt {
+    width: 60px;
+    filter: invert(91%) sepia(15%) saturate(6851%) hue-rotate(2deg) brightness(107%) contrast(103%);
+  }
+  body .pricing {
+    background: radial-gradient(circle at center center, #ffe203 0%, #242424 35%);
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  body .pricing .pricingTitles {
+    width: 35%;
+  }
+  body .pricing .pricingTitles p {
+    padding-top: 15px;
+    padding-bottom: 40px;
+  }
+  body .pricing .pricingTitles .title2 {
+    color: #f1f1f1;
+    font-size: 50px;
+    font-weight: 600;
+    font-size: 24px;
+  }
+  body .pricing .planes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+  }
+  body .pricing .planes li {
+    padding-bottom: 10px;
+  }
+  body .pricing .planes .plan {
+    background-color: #27292d;
+    height: 550px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: #f1f1f1;
+  }
+  body .pricing .planes .plan h4 {
+    font-size: 18px;
+  }
+  body .pricing .planes .plan p {
+    font-size: 18px;
+    width: 70%;
+    padding-bottom: 30px;
+    border-bottom: #59c378 solid 1px;
+  }
+  body .pricing .planes .plan ul {
+    padding-left: 0%;
+  }
+  body .pricing .planes .plan .planType {
+    background-color: #59c378;
+    font-size: 17px;
+    width: fit-content;
+    padding: 8px 28px;
+    border-radius: 0 0 10px 10px;
+  }
+  body .pricing .planes .plan .planType .mySpan {
+    font-size: 40px;
+    font-weight: 800;
+  }
+  body .pricing .planes .plan .planBtn {
+    color: #59c378;
+    font-weight: 600;
+    border: #59c378 solid 1px;
+    width: fit-content;
+    padding: 8px 28px;
+    margin-bottom: 50px;
+    transition: 0.4s;
+  }
+  body .pricing .planes .plan .planBtn:hover {
+    background-color: #41b362;
+    color: #f1f1f1;
+  }
+}
 /*VARIABLES DE COLOR*/
 /*TIME in Transition*/
 /*Título para >500*/
