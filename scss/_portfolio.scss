@@ -1,0 +1,103 @@
+@import "var";
+
+/*portfolio*/
+
+.portfolio2{
+    // background: radial-gradient(circle at 25% center , $secondary-hover 0%, $dark-2-color 30%);
+    height: 100vh;
+    .port2title{
+        @include displayFlex ($jtfCont:space-between);
+        .title2{
+            @include h2Title;
+        }
+        .port2TitleImg{
+            width: fit-content;
+            background-color: $dark-3-color;
+            border-radius: 50%;
+            padding: 30px;
+            border: $dark-2-color solid 10px;
+            outline: $dark-3-color 2px dashed;
+            .workIcon{
+                width: 60px;
+                filter: $secondary-color-icon;
+            }
+        }
+    }
+    .contImg{
+        overflow: hidden;
+        .imgCar {
+            height: 400px;
+            width: auto;
+            transition: transform $timeTr; 
+            &:hover{
+                transform: scale(1.2);
+            }
+        }
+    }
+    .myCardPort{
+        color: $light-1-color;
+        padding-top: 30px;
+        h4{
+            font-weight: 600;
+        }
+         p{
+            font-size: 15px;
+            padding-top: 10px;
+        }
+    }
+    /*clases del carrousel*/
+
+    .owl-carousel .owl-nav.disabled {
+        display:block;
+    }
+    .owl-nav button{
+        @include myOwlCar;
+    }
+
+}
+
+/*Opinion*/
+
+.opinionBackground{
+    background-image:url("../img/bg-quotes.jpg");
+    background-repeat: no-repeat;
+     height: 100vh;
+     width: 100%;
+     .opinions{
+        height: 100vh;
+        @include displayFlex;
+        color: $light-1-color;
+        .opinionImg{
+            height: 50%;
+            padding: 60px 0 0 80px;
+            .imgopion{
+                border-radius: 50%;
+                box-shadow:
+                0 0 0 15px $dark-4-color,
+                0 0 0 30px $dark-1-color,
+                0 0 0 70px $dark-2-color,
+                0 0 0 90px $dark-3-color,
+                0 0 0 110px $dark-23-color,
+                0 0 0 150px $dark-4-color;
+            }
+        }
+        .opinionText{
+            h3{
+                font-weight: 600;
+            }
+            p{
+                font-size: 16px;
+            }
+            h4{
+                font-weight: 600; 
+                span{
+                    font-weight: 500;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+
+

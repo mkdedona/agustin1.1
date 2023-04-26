@@ -1,0 +1,266 @@
+@import "var";
+
+.aboutMe{
+    background:
+     radial-gradient(circle at 25% center,$dark-2-color,$dark-1-color,$violet-2-color);
+     height: 125vh;
+     .subAboutMe{
+        padding: 50px 0px 130px 10px;
+        @include displayFlex ($flxDir:column, $jtfCont:space-evenly ,$algnItm:flex-start);
+        .sec1{
+            position: relative;
+            .bigCard{
+                height: 350px;
+                width: 350px;
+                background-image: linear-gradient(180deg,$dark-23-color,$dark-2-color);
+                border-radius: 10px;
+                @include displayFlex($flxDir:column, $jtfCont:flex-start);
+                z-index:0;
+                .h3litCard{
+                    color: $secondary-color;
+                    font-size: 150px;
+                    font-weight: 600;
+                }
+            }
+            .litCard{
+                @include cardProgram($degrees: 90deg);
+                width: 300px;
+                position: absolute;
+                top: 250px;
+                left: 150px;
+                z-index:1;
+
+            .h4litCard{
+                color: #59C378;
+                font-size: 40px;
+            }
+            }
+        }
+        .sec2{
+            width:100%;
+            display: flex;
+            flex-direction: column;
+            .title2{
+                @include   h2Title;
+                font-size: $tit500;
+            }
+            .skillsCont{
+                display: flex;
+                flex-direction: column;
+                .skillsSub{
+                    @include displayFlex($jtfCont:space-between);
+                    flex-wrap: wrap;
+                    margin-bottom: 30px;
+                    .myProg{
+                        width: 42.33%;
+                        height: 130px;
+                        margin: 0 15px 30px 15px;
+                        h5{
+                            color: $light-1-color;
+                            font-size: 35px;
+                            font-weight: 600;
+                        }
+                        p{
+                            font-size: 18px;
+                            font-weight: 500
+                        }
+                    }
+                    .mp1{
+                        @include cardProgram( 
+                            $clr1:$secondary-color, 
+                            $clr2:$secondary-color, 
+                            $flxDir:column,
+                            $jtfCont: center);
+                    }
+                    
+                    .mp2{
+                        @include cardProgram( 
+                            $clr1:$primary-color, 
+                            $clr2:$primary-color, 
+                            $flxDir:column,
+                            $jtfCont: center);
+                    }
+                    
+                    .mp3{
+                        @include cardProgram( 
+                            $clr1:$red-color, 
+                            $clr2:$red-color, 
+                            $flxDir:column,
+                            $jtfCont: center);
+                    }
+                    
+                    .mp4{
+                        @include cardProgram( 
+                            $clr1:$orange-color, 
+                            $clr2:$orange-color, 
+                            $flxDir:column,
+                            $jtfCont: center);
+                    }
+                    
+                    .mp5{
+                        @include cardProgram( 
+                            $clr1:$blue-color, 
+                            $clr2:$blue-color, 
+                            $flxDir:column,
+                            $jtfCont: center);
+                    }
+                    
+                    .mp6{
+                        @include cardProgram( 
+                            $clr1:$violet-color, 
+                            $clr2:$violet-color, 
+                            $flxDir:column,
+                            $jtfCont: center);
+                        }
+                    }
+                }
+            }
+        }
+    }
+/*Work Experience */
+    .portfolio{
+        background: radial-gradient(circle at center center, $red-color 0% , $dark-1-color 55%);
+        height: 110vh;
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        text-align: center;
+        .secPort1{padding-top: 150px;
+            color: $light-1-color;
+            .title2{
+                @include h2Title;
+                font-size: $tit500;
+            }
+            }
+        .secPort2{
+            @include displayFlex ($flxDir:column);
+            gap: 30px;
+            width: 100%;
+            height: 100%;
+            padding-bottom: 100px;
+            .work{
+                display:flex;
+                flex-wrap:wrap;
+                justify-content: flex-start;
+                align-items: center;
+                background-color: $dark-2-color;
+                border-radius: 10px;
+                color: $light-1-color;
+                width: 100%;
+                height: 180px;
+                text-align:start;
+                .itemJob{
+
+                }
+                h3{
+                    font-weight: 600;
+                    font-size: 16px;
+                    margin-left: 25px;
+                }
+                img{
+                    width:90px;
+                    margin-top: 25px;
+                }
+                h4{
+                    font-size: 18px;
+                    font-weight: 600;
+                    margin-left: 25px;
+                }
+                p{
+                    color: $red-color;
+                    font-size: 14px;
+                    margin-left: 25px;
+                }
+                a{
+                    color: $light-1-color;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+
+
+
+ /*Media Queries 1200px*/
+
+@media (min-width: 1200px ) {
+    .aboutMe{   
+         .subAboutMe{
+            padding: 200px 0 130px 0;
+            @include displayFlex ($jtfCont:space-around);
+            height: 100vh;
+            .sec1{
+                .bigCard{
+                    height: 450px;
+                    width: 350px;
+                    padding-top: 50px;
+                }
+                .litCard{
+                    top: 330px;
+                    right: 150px;    
+                }
+            }
+            .sec2{
+                .title2{
+                    @include   h2Title;
+                }
+                .skillsCont{
+                    .skillsSub{
+                        .myProg{
+                            width: 180px;
+                            height: 180px;
+                        }                     
+                        }
+                    }
+                }
+            }
+        }
+    /*Work Experience */
+        .portfolio{
+            background: radial-gradient(circle at center center, $red-color 0% , $dark-1-color 55%);
+            height: 110vh;
+            // @include displayFlex ($flxDir:column);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            .secPort1{padding-top: 150px;
+                color: $light-1-color;
+                width: 40%;
+                .title2{
+                    @include h2Title;
+                }
+                }
+            .secPort2{
+                @include displayFlex ($flxDir:column);
+                gap: 30px;
+                width: 100%;
+                height: 100%;
+                padding-bottom: 100px;
+                .work{
+                    @include displayFlex ($jtfCont:space-around);
+                    background-color: $dark-2-color;
+                    border-radius: 10px;
+                    color: $light-1-color;
+                    width: 100%;
+                    height: 120px;
+                    h3{
+                        font-weight: 600;
+                        font-size: 35px;
+                    }
+                    img{
+                        width:90px;
+                    }
+                    p{
+                        color: $red-color;
+                        font-size: 15px;
+                    }
+                    a{
+                        color: $light-1-color;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+}

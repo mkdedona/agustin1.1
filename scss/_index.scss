@@ -1,0 +1,332 @@
+@import "var";
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box; 
+    font-family: 'Inter', sans-serif;  
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: $dark-1-color;
+    li{
+        list-style: none;
+    }
+    a{
+        text-decoration: none;
+    }
+    p{
+        font-size: 20px;
+        color: $light-1-color;
+    }
+    .myHeader{
+            width: 100vw;
+            height: 100px;
+            margin: 0px !important;
+            @include displayFlex ($jtfCont:space-between);
+            .myLogoText{
+                @include h2Title($clr:$light-1-color, $fntS:25px,$fntW:800); 
+                  
+            }
+            .myContNav{
+                order: -1;
+                .myButton{
+                    background-color: $primary-color;
+                    span{
+                        filter: $light-1-color-icon;
+                    } 
+                }
+                .myNavbar{
+                    .myUl{
+                        @include displayFlex ($jtfCont:space-between,$flxDir:column);
+                        .myLi{
+                            font-size: 1.0666666667rem;;
+                            font-weight: 500;
+                            line-height: 1.5;
+                            color: $light-1-color;
+                            border-bottom: 3px solid $dark-1-color;
+            
+                        }
+            
+                    }
+                }
+            }
+            
+            .myNavRight{
+                @include displayFlex;
+                .btnCv{
+                    @include bnt1;    
+                    padding: 8px 5px;
+    
+                }
+            }
+    }
+    .myMain{
+        height: 100vh;
+        background-image: url("../img/bg.jpeg");
+        background-repeat: no-repeat;
+        background-size: 100vw 100%;
+        padding-top: 60px;
+        .profileSection{
+                width: 100%;
+                 @include displayFlex ($jtfCont:space-between,$flxDir:column);
+                text-align: center;
+                .profileText{
+                    padding-top: 10%;
+                    .myH1{
+                        font-size: 35px;
+                        font-weight: 700;
+                        color: $secondary-color;
+                        .mySpam{
+                            font-size: 40px;
+                            font-weight: 700;
+                            color: $light-1-color;
+                        }
+                    }
+                    .profileH2{
+                        @include   h2Title($clr:$primary-color, $fntS:20px);
+    
+                    }
+                    .btnMain{
+                        @include bnt1;
+                        padding: 8px 5px;
+                    }
+                }
+                .secImgProf{
+                    position: relative;
+                    padding-top: 60px;
+                    .myProfImg{
+                        width: 300px;
+                        border-radius: 50%;
+                    }
+                    .floatIcon{
+                        position: absolute;
+                        width: 30%;
+                        border: $light-1-color solid 15px;
+                        border-radius: 20px;
+                        background-color: $light-1-color;
+                    }
+                    .iconProf1{
+                    top: 20%;
+                    right: 70%;
+                    }
+                    .iconProf2{
+                    top: 20%;
+                    right: 0%;
+                    }
+                    .iconProf3{
+                    top: 75%;
+                    right: 0%;
+                    }
+                }
+        }    
+    }
+    /*footer*/
+    .myFooter{
+                background-color: $dark-1-color;
+                color: $light-1-color;
+                font-size: 16px;
+                p{
+                    font-size: 16px;
+                }
+                .subFooter{
+                    height: 60vh;
+                    background: radial-gradient(circle at 70% 30% , $primary-color 0%, $dark-1-color 40%);
+                    @include displayFlex ($jtfCont:space-between);
+                    border-bottom: $dark-2-color 2px solid;
+        
+                    .footerLeft{
+                        border-right: $dark-2-color 2px solid;
+                        @include displayFlex ($flxDir:column, $jtfCont:space-evenly,$algnItm:flex-start);
+                        height: 70%;
+                        width: 30%;
+                        padding-right: 30px;
+        
+                        .footerLink{
+                            @include displayFlex;
+                            .myLogoText{
+                                @include h2Title($clr:$light-1-color, $fntS:40px,$fntW:600);
+                            }
+                        }
+        
+                        .redes{
+                            width: 25px;
+                            padding-right: 5px;
+                            filter: brightness(0)
+                                    saturate(100%)
+                                    invert(98%)
+                                    sepia(100%)
+                                    saturate(8%)
+                                    hue-rotate(118deg) 
+                                    brightness(102%)
+                                    contrast(102%);
+                        }
+                    }
+                }
+                .footerMap{
+                    @include displayFlex ($jtfCont:space-evenly);
+                    .colMap{
+                        @include displayFlex ($flxDir:column, $jtfCont:space-evenly,$algnItm:flex-start);
+                        gap: 15px;
+                        width: 25%;
+                        h5{
+                            font-weight: 600;
+                        }
+                        ul{
+                            height: 100%;
+                            padding-left: 0%;
+                            @include displayFlex ($flxDir:column, $jtfCont:space-between);
+                        }
+                        .myform{
+                            display: flex;
+                            flex-direction: row;
+                            .myInputMail{
+                                background-color: $dark-2-color;
+                                border: $dark-2-color solid 1px;
+                                color: $light-1-color;
+                                padding: 10px;
+                                border-radius: 10px 0 0 10px;
+                            }
+                            &:focus{
+                                outline: none;
+                            }
+                            .formEnvelope{
+                                background-color: $dark-2-color;
+                                border: $dark-2-color solid 1px;
+                                font-size: 30px;
+                                color: $light-1-color;
+                                border-radius:  0 10px 10px 0;
+                            }
+                        }
+                    }
+                }
+                
+                .myFooterAdd{
+                    font-weight:400;
+                    text-align: center;
+                    padding: 30px;
+                    height: 50px;
+                }
+    }
+    .contentArrow{
+        position: fixed;
+        bottom: 30px;
+        right: 10px; 
+        .arrow{
+            width: fit-content;
+            background-color: $primary-hover;
+            border: 2px solid $primary-color;
+            border-radius: 100%;         
+            font-size: 20px;
+            padding: 5px 10px 5px 10px;
+            text-anchor: 0;
+            color: $light-1-color;
+            transition: $timeTr;
+            &:hover{
+                background-color: $primary-color;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+
+
+/*Media Queries 1200px*/
+
+@media (min-width: 1200px ) {
+    body{
+
+        .myHeader{
+            width: 100%;
+            @include displayFlex ($jtfCont:space-evenly);
+            transition: top $timeTr;
+            .myLogoText{
+                @include h2Title($clr:$light-1-color, $fntS:40px,$fntW:600);
+            }
+            .myContNav{
+                order: 0;
+                .myNavbar{
+                    @include displayFlex;
+                    .myUl{
+                        @include displayFlex ($jtfCont:space-between);
+                        gap: 17px;
+                        .myLi{
+                            font-size: 1.0666666667rem;;
+                            font-weight: 500;
+                            line-height: 1.5;
+                            color: $light-1-color;
+                            border-bottom: 3px solid transparent;
+                            &:hover{
+                                color: $light-1-color;
+                                border-bottom: 3px solid $primary-color;
+                            }
+                        }
+                        .activeLi{
+                            color: $light-1-color;
+                            border-bottom: 3px solid $primary-color;
+                    
+                        }
+                    }
+                }
+            }
+            .myNavRight{
+                @include displayFlex;
+                .btnCv{
+                    @include bnt1;
+                }
+            }
+        }
+        .myMain{
+            padding-bottom: 5%; 
+            .profileSection{
+                @include displayFlex ($jtfCont:space-between);
+                .profileText{
+                    .myH1{
+                        font-size: 50px;
+                    .mySpam{
+                            font-size: 80px;
+
+                        }
+                    }
+                    .profileH2{
+                        @include   h2Title($clr:$primary-color, $fntS:30px);
+    
+                    }
+                    .btnMain{
+                        @include bnt1;
+                    }
+                }
+                .secImgProf{
+                    position: relative;
+                    .myProfImg{
+                        margin-top: 30%;
+                        margin-left: 15%; 
+                        position: relative;
+                        width: 500px;
+                    }
+                    .floatIcon{
+                        width: 17%;
+                        border: $light-1-color solid 20px;
+                    }
+                    .iconProf1{
+                    top: 40%;
+                    right: 67%;
+                    }
+                    .iconProf2{
+                    top: 40%;
+                    right: 10%;
+                    }
+                    .iconProf3{
+                    top: 85%;
+                    right: 10%;
+                    }
+                    }
+            }
+            
+        }    
+    }
+}
+
+
