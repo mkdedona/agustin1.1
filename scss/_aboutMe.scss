@@ -3,7 +3,6 @@
 .aboutMe{
     background:
      radial-gradient(circle at 25% center,$dark-2-color,$dark-1-color,$violet-2-color);
-     height: 125vh;
      .subAboutMe{
         padding: 50px 0px 130px 10px;
         @include displayFlex ($flxDir:column, $jtfCont:space-evenly ,$algnItm:flex-start);
