@@ -31,13 +31,7 @@ body p {
   color: #f1f1f1;
 }
 body .myHeader {
-  width: 100vw;
-  height: 100px;
   margin: 0px !important;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
 }
 body .myHeader .myLogoText {
   color: #f1f1f1;
@@ -173,11 +167,11 @@ body .myFooter p {
   font-size: 16px;
 }
 body .myFooter .subFooter {
-  height: 60vh;
-  background: radial-gradient(circle at 70% 30%, #59c378 0%, #242424 40%);
+  height: auto;
+  background: radial-gradient(circle at 70% 40%, #59c378 0%, #242424 50%);
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
   border-bottom: #27292d 2px solid;
 }
@@ -185,11 +179,9 @@ body .myFooter .subFooter .footerLeft {
   border-right: #27292d 2px solid;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: flex-start;
   height: 70%;
-  width: 30%;
-  padding-right: 30px;
 }
 body .myFooter .subFooter .footerLeft .footerLink {
   display: flex;
@@ -209,9 +201,11 @@ body .myFooter .subFooter .footerLeft .redes {
 }
 body .myFooter .footerMap {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: flex-start;
+  gap: 50px;
+  padding-bottom: 50px;
 }
 body .myFooter .footerMap .colMap {
   display: flex;
@@ -219,7 +213,7 @@ body .myFooter .footerMap .colMap {
   justify-content: space-evenly;
   align-items: flex-start;
   gap: 15px;
-  width: 25%;
+  padding-top: 50px;
 }
 body .myFooter .footerMap .colMap h5 {
   font-weight: 600;
@@ -230,7 +224,7 @@ body .myFooter .footerMap .colMap ul {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 body .myFooter .footerMap .colMap .myform {
   display: flex;
@@ -283,11 +277,7 @@ body .contentArrow .arrow:hover {
 /*Media Queries 1200px*/
 @media (min-width: 1200px) {
   body .myHeader {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
+    width: 100vw;
     transition: top 0.4s;
   }
   body .myHeader .myLogoText {
@@ -297,6 +287,8 @@ body .contentArrow .arrow:hover {
   }
   body .myHeader .myContNav {
     order: 0;
+    display: flex;
+    justify-content: center;
   }
   body .myHeader .myContNav .myNavbar {
     display: flex;
@@ -406,6 +398,121 @@ body .contentArrow .arrow:hover {
   body .myMain .profileSection .secImgProf .iconProf3 {
     top: 85%;
     right: 10%;
+  }
+  body .myFooter {
+    background-color: #242424;
+    color: #f1f1f1;
+    font-size: 16px;
+  }
+  body .myFooter p {
+    font-size: 16px;
+  }
+  body .myFooter .subFooter {
+    height: 60vh;
+    background: radial-gradient(circle at 70% 30%, #59c378 0%, #242424 40%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: #27292d 2px solid;
+  }
+  body .myFooter .subFooter .footerLeft {
+    border-right: #27292d 2px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    height: 70%;
+    width: 30%;
+    padding-right: 30px;
+  }
+  body .myFooter .subFooter .footerLeft .footerLink {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  body .myFooter .subFooter .footerLeft .footerLink .myLogoText {
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: 600;
+  }
+  body .myFooter .subFooter .footerLeft .redes {
+    width: 25px;
+    padding-right: 5px;
+    filter: brightness(0) saturate(100%) invert(98%) sepia(100%) saturate(8%) hue-rotate(118deg) brightness(102%) contrast(102%);
+  }
+  body .myFooter .footerMap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  body .myFooter .footerMap .colMap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap: 15px;
+    width: 25%;
+  }
+  body .myFooter .footerMap .colMap h5 {
+    font-weight: 600;
+  }
+  body .myFooter .footerMap .colMap ul {
+    height: 100%;
+    padding-left: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  body .myFooter .footerMap .colMap .myform {
+    display: flex;
+    flex-direction: row;
+  }
+  body .myFooter .footerMap .colMap .myform .myInputMail {
+    background-color: #27292d;
+    border: #27292d solid 1px;
+    color: #f1f1f1;
+    padding: 10px;
+    border-radius: 10px 0 0 10px;
+  }
+  body .myFooter .footerMap .colMap .myform:focus {
+    outline: none;
+  }
+  body .myFooter .footerMap .colMap .myform .formEnvelope {
+    background-color: #27292d;
+    border: #27292d solid 1px;
+    font-size: 30px;
+    color: #f1f1f1;
+    border-radius: 0 10px 10px 0;
+  }
+  body .myFooter .myFooterAdd {
+    font-weight: 400;
+    text-align: center;
+    padding: 30px;
+    height: 50px;
+  }
+  body .contentArrow {
+    position: fixed;
+    bottom: 30px;
+    right: 10px;
+  }
+  body .contentArrow .arrow {
+    width: fit-content;
+    background-color: #41b362;
+    border: 2px solid #59c378;
+    border-radius: 100%;
+    font-size: 20px;
+    padding: 5px 10px 5px 10px;
+    text-anchor: 0;
+    color: #f1f1f1;
+    transition: 0.4s;
+  }
+  body .contentArrow .arrow:hover {
+    background-color: #59c378;
+    font-weight: 600;
   }
 }
 /*VARIABLES DE COLOR*/
@@ -1385,32 +1492,39 @@ body .contentArrow .arrow:hover {
 /*Título para >500*/
 /*MIXINS*/
 .contactUs {
-  background: url("../img/contact.png") no-repeat;
-  width: 90%;
-  height: 300px;
-  margin-top: 100px;
+  display: none;
 }
-.contactUs .subContact {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  padding-top: 80px;
-}
-.contactUs .subContact .h2Contact {
-  color: #f1f1f1;
-  font-size: 50px;
-  font-weight: 600;
-}
-.contactUs .subContact .btnContact {
-  background-color: #242424;
-  width: fit-content;
-  height: fit-content;
-  padding: 10px 20px;
-  color: #f1f1f1;
-  font-weight: 600;
-  border-radius: 5px;
+
+@media (min-width: 700px) {
+  body .contactUs {
+    display: block;
+    background: url("../img/contact.png") no-repeat;
+    width: 90%;
+    height: 300px;
+    margin-top: 100px;
+  }
+  body .contactUs .subContact {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 80px;
+  }
+  body .contactUs .subContact .h2Contact {
+    color: #f1f1f1;
+    font-size: 50px;
+    font-weight: 600;
+  }
+  body .contactUs .subContact .btnContact {
+    background-color: #242424;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px 20px;
+    color: #f1f1f1;
+    font-weight: 600;
+    border-radius: 5px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

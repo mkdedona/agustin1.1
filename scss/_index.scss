@@ -21,10 +21,7 @@ body{
         color: $light-1-color;
     }
     .myHeader{
-            width: 100vw;
-            height: 100px;
             margin: 0px !important;
-            @include displayFlex ($jtfCont:space-between);
             .myLogoText{
                 @include h2Title($clr:$light-1-color, $fntS:25px,$fntW:800); 
                   
@@ -131,18 +128,15 @@ body{
                     font-size: 16px;
                 }
                 .subFooter{
-                    height: 60vh;
-                    background: radial-gradient(circle at 70% 30% , $primary-color 0%, $dark-1-color 40%);
-                    @include displayFlex ($jtfCont:space-between);
+                    height: auto;
+                    background: radial-gradient(circle at 70% 40% , $primary-color 0%, $dark-1-color 50%);
+                    @include displayFlex ($flxDir:column, $jtfCont:flex-start);
                     border-bottom: $dark-2-color 2px solid;
         
                     .footerLeft{
                         border-right: $dark-2-color 2px solid;
-                        @include displayFlex ($flxDir:column, $jtfCont:space-evenly,$algnItm:flex-start);
-                        height: 70%;
-                        width: 30%;
-                        padding-right: 30px;
-        
+                        @include displayFlex ($flxDir:column, $jtfCont:flex-start,$algnItm:flex-start);
+                        height: 70%;        
                         .footerLink{
                             @include displayFlex;
                             .myLogoText{
@@ -165,18 +159,20 @@ body{
                     }
                 }
                 .footerMap{
-                    @include displayFlex ($jtfCont:space-evenly);
+                    @include displayFlex ($flxDir:column,$jtfCont:space-evenly, $algnItm:flex-start);
+                    gap:50px;
+                    padding-bottom:50px;
                     .colMap{
                         @include displayFlex ($flxDir:column, $jtfCont:space-evenly,$algnItm:flex-start);
                         gap: 15px;
-                        width: 25%;
+                        padding-top:50px;
                         h5{
                             font-weight: 600;
                         }
                         ul{
                             height: 100%;
                             padding-left: 0%;
-                            @include displayFlex ($flxDir:column, $jtfCont:space-between);
+                            @include displayFlex ($flxDir:column, $jtfCont:space-between, $algnItm:flex-start);
                         }
                         .myform{
                             display: flex;
@@ -237,23 +233,23 @@ body{
 
 @media (min-width: 1200px ) {
     body{
-
         .myHeader{
-            width: 100%;
-            @include displayFlex ($jtfCont:space-evenly);
+            width: 100vw ;
             transition: top $timeTr;
             .myLogoText{
                 @include h2Title($clr:$light-1-color, $fntS:40px,$fntW:600);
             }
             .myContNav{
                 order: 0;
+                display: flex;
+                justify-content: center;
                 .myNavbar{
                     @include displayFlex;
                     .myUl{
                         @include displayFlex ($jtfCont:space-between);
                         gap: 17px;
                         .myLi{
-                            font-size: 1.0666666667rem;;
+                            font-size: 1.0666666667rem;
                             font-weight: 500;
                             line-height: 1.5;
                             color: $light-1-color;
@@ -325,7 +321,113 @@ body{
                     }
             }
             
-        }    
+        } 
+        .myFooter{
+            background-color: $dark-1-color;
+            color: $light-1-color;
+            font-size: 16px;
+            p{
+                font-size: 16px;
+            }
+            .subFooter{
+                height: 60vh;
+                background: radial-gradient(circle at 70% 30% , $primary-color 0%, $dark-1-color 40%);
+                @include displayFlex ($jtfCont:space-between);
+                border-bottom: $dark-2-color 2px solid;
+    
+                .footerLeft{
+                    border-right: $dark-2-color 2px solid;
+                    @include displayFlex ($flxDir:column, $jtfCont:space-evenly,$algnItm:flex-start);
+                    height: 70%;
+                    width: 30%;
+                    padding-right: 30px;
+    
+                    .footerLink{
+                        @include displayFlex;
+                        .myLogoText{
+                            @include h2Title($clr:$light-1-color, $fntS:40px,$fntW:600);
+                        }
+                    }
+    
+                    .redes{
+                        width: 25px;
+                        padding-right: 5px;
+                        filter: brightness(0)
+                                saturate(100%)
+                                invert(98%)
+                                sepia(100%)
+                                saturate(8%)
+                                hue-rotate(118deg) 
+                                brightness(102%)
+                                contrast(102%);
+                    }
+                }
+            }
+            .footerMap{
+                @include displayFlex ($jtfCont:space-evenly);
+                .colMap{
+                    @include displayFlex ($flxDir:column, $jtfCont:space-evenly,$algnItm:flex-start);
+                    gap: 15px;
+                    width: 25%;
+                    h5{
+                        font-weight: 600;
+                    }
+                    ul{
+                        height: 100%;
+                        padding-left: 0%;
+                        @include displayFlex ($flxDir:column, $jtfCont:space-between);
+                    }
+                    .myform{
+                        display: flex;
+                        flex-direction: row;
+                        .myInputMail{
+                            background-color: $dark-2-color;
+                            border: $dark-2-color solid 1px;
+                            color: $light-1-color;
+                            padding: 10px;
+                            border-radius: 10px 0 0 10px;
+                        }
+                        &:focus{
+                            outline: none;
+                        }
+                        .formEnvelope{
+                            background-color: $dark-2-color;
+                            border: $dark-2-color solid 1px;
+                            font-size: 30px;
+                            color: $light-1-color;
+                            border-radius:  0 10px 10px 0;
+                        }
+                    }
+                }
+            }
+            
+            .myFooterAdd{
+                font-weight:400;
+                text-align: center;
+                padding: 30px;
+                height: 50px;
+            }
+        }
+        .contentArrow{
+    position: fixed;
+    bottom: 30px;
+    right: 10px; 
+    .arrow{
+        width: fit-content;
+        background-color: $primary-hover;
+        border: 2px solid $primary-color;
+        border-radius: 100%;         
+        font-size: 20px;
+        padding: 5px 10px 5px 10px;
+        text-anchor: 0;
+        color: $light-1-color;
+        transition: $timeTr;
+        &:hover{
+            background-color: $primary-color;
+            font-weight: 600;
+        }
+    }
+        }   
     }
 }
 

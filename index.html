@@ -27,14 +27,14 @@
     <title>Document</title>
 </head>
 <body> 
-    <header class="container-fluid myHeader fixed-top" id="myHeader">
-        <a class="navbar-brand wip_logo col-lg-2  myLogoText" href="index.html"><img src="./img/logo.png" class="myLogo" alt="profile picture">&nbsp;&nbsp;Elito.</a>
+    <header class="myHeader  fixed-top" id="myHeader">
+        <!--<a class="navbar-brand wip_logo col-lg-2  myLogoText navbar-brand" href="index.html"><img src="./img/logo.png" class="myLogo" alt="profile picture">&nbsp;&nbsp;Elito.</a>
         <nav class="navbar navbar-expand-lg myContNav  col-lg-8 ">
             <button class="navbar-toggler myButton" type="button" data-bs-toggle="collapse"        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse  myNavbar dropdown col-8" id="navbarNav">
-                <ul class="navbar-nav ml-auto myUl dropdown-menu">
+                <ul class="navbar-nav ml-auto myUl">
                         <li class="nav-item "><a href="#myHome" class="nav-link myLi activeLi">Home</a></li>
                         <li class="nav-item "><a href="#myAboutUs" class="nav-link myLi">About</a></li>
                         <li class="nav-item "><a href="#myService" class="nav-link myLi">Service</a></li>
@@ -46,8 +46,43 @@
         </nav>
         <div class="myNavRight col-lg-2 ">
             <a href="./img/Agustín Coiro_CV.pdf" download="Agustín Coiro_CV" class="btnCv">Resume&nbsp; &nbsp;↓</a>
-        </div>
+        </div>-->
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand wip_logo col-lg-2  myLogoText" href="index.html"><img src="./img/logo.png" class="myLogo" alt="profile picture">&nbsp;&nbsp;Elito.</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse myContNav col-lg-8" id="navbarNavDropdown">
+                <ul class="navbar-nav myUl">
+                  <li class="nav-item">
+                    <a class="nav-link  myLi activeLi" aria-current="page" href="#myHome">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link myLi" href="#myAboutUs">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link myLi" href="#myService">Service</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link myLi" href="#myPortfolio">Portfolio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link myLi" href="#myBlog">Blog</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link myLi" href="#myContact">Contact</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="myNavRight col-lg-2 ">
+                <a href="./img/Agustín Coiro_CV.pdf" download="Agustín Coiro_CV" class="btnCv">Resume&nbsp; &nbsp;↓</a>
+            </div>
+            </div>
+          </nav>
     </header>
+
 
     <article class="myMain sections" id="myHome">
         <section class="profileSection  container ">
@@ -247,7 +282,7 @@
                 <h2 class="title2"> Recent Work. </h2>
                 <p>Must explain to you how all this mistaken idea pleasure born and give you a complete account.</p>
             </div>
-            <div class="port2TitleImg"><img src="self-growth.png" alt="incon self-growth" class="workIcon"></div>
+            <div class="port2TitleImg"><img src="img/self-growth.png" alt="incon self-growth" class="workIcon"></div>
         </section>
 
         <section>
@@ -435,7 +470,7 @@
 
     <footer class="myFooter">
         <div class="container subFooter">
-            <div class="col-4 footerLeft">
+            <div class="col-lg-4 footerLeft">
                 <a href="" class="footerLink"><img src="./img/logo.png" class="myLogo" alt="profile picture"><h4 class="myLogoText">&nbsp;&nbsp;Elito.</h4></a>
                 <p>Welcome and open yourself to your truest love this year with us! With the Release Process</p>
                 <div>
@@ -446,17 +481,17 @@
                     <a href="https://vimeo.com/" class="redes" Target="_blank"><img class="redes" src="./img/redes/vimeo.png" alt="vimeo"></a>
                 </div>
             </div>
-            <div class="col-8 footerMap">
-                <div class="col-3 colMap">
+            <div class="col-lg-8 footerMap">
+                <div class="col-lg-3 colMap">
                     <h5>Navigation</h5>
                     <ul>
                         <li>-About us</li>
                         <li>-Contact us</li>
                         <li>-Video Guide</li>
-                        <li>Recent Post</li>
+                        <li>-Recent Post</li>
                     </ul>
                 </div>
-                <div class="col-3 colMap">
+                <div class="col-lg-3 colMap">
                     <h5>All Services</h5>
                     <ul>
                         <li>-Web Design</li>
@@ -465,7 +500,7 @@
                         <li>-Digital Marketing</li>
                     </ul>
                 </div>
-                <div class="col-6 colMap">
+                <div class="col-lg-6 colMap">
                     <h5>Newsletter</h5>
                     <p>Must explain to you how all this mistaken idea pleasure born and give you a complete account.</p>
                     <form action="" class="myform">
@@ -474,7 +509,6 @@
                 </div>
             </div>
         </div>
-
         <address class="myFooterAdd">Copyright © 2022 Elito. All rights reserved.</address>
     </footer>
 
