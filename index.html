@@ -27,9 +27,47 @@
     <title>Document</title>
 </head>
 <body> 
-    <header class="myHeader  fixed-top" id="myHeader">
-        <!--<a class="navbar-brand wip_logo col-lg-2  myLogoText navbar-brand" href="index.html"><img src="./img/logo.png" class="myLogo" alt="profile picture">&nbsp;&nbsp;Elito.</a>
-        <nav class="navbar navbar-expand-lg myContNav  col-lg-8 ">
+    <header class="myHeader  fixed-top" id="myHeader">        
+        <nav class="myContNav navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand wip_logo col-lg-2  myLogoText" href="index.html"><img src="./img/logo.png" class="myLogo" alt="profile picture">&nbsp;&nbsp;Elito.</a>
+              <button class="myButton navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="myOffCanvas offcanvas offcanvas-start col-lg-8" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <a class="navbar-brand wip_logo myLogoText" href="index.html"><img src="./img/logo.png" class="myLogo" alt="profile picture">&nbsp;&nbsp;Elito.</a>
+                  <button type="button" class="myBtnClose btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="myNavbar offcanvas-body">
+                  <ul class="myUl navbar-nav flex-grow-1 pe-3 ">
+                    <li class="nav-item">
+                      <a class="myLi nav-link active" aria-current="page" href="#myHome">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="myLi nav-link " aria-current="page" href="#myAboutUs">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="myLi nav-link " aria-current="page" href="#myService">Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="myLi nav-link " aria-current="page" href="#myPortfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="myLi nav-link " aria-current="page" href="#myBlog">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="myLi nav-link " aria-current="page" href="#myContact">Contact</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="myNavRight col-lg-2 ">
+                <a href="./img/Agustín Coiro_CV.pdf" download="Agustín Coiro_CV" class="btnCv">Resume&nbsp; &nbsp;↓</a>
+            </div>
+            </div>
+            </nav>
+        <!-- <nav class="navbar navbar-expand-lg myContNav  col-lg-8 ">
             <button class="navbar-toggler myButton" type="button" data-bs-toggle="collapse"        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -44,10 +82,7 @@
                 </ul>
             </div>
         </nav>
-        <div class="myNavRight col-lg-2 ">
-            <a href="./img/Agustín Coiro_CV.pdf" download="Agustín Coiro_CV" class="btnCv">Resume&nbsp; &nbsp;↓</a>
-        </div>-->
-
+    
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
                 <a class="navbar-brand wip_logo col-lg-2  myLogoText" href="index.html"><img src="./img/logo.png" class="myLogo" alt="profile picture">&nbsp;&nbsp;Elito.</a>
@@ -80,8 +115,9 @@
                 <a href="./img/Agustín Coiro_CV.pdf" download="Agustín Coiro_CV" class="btnCv">Resume&nbsp; &nbsp;↓</a>
             </div>
             </div>
-          </nav>
-    </header>
+          </nav>-->
+        </header>
+
 
 
     <article class="myMain sections" id="myHome">
@@ -460,15 +496,14 @@
         </section>
     </section>
     </article>
+    <footer class="myFooter" id="myContact">
+        <article class="contactUs sections" >
+            <section class="subContact container">
+                <h2 class="h2Contact col-6">Send me a message and make something together.</h2>
+                <a href="mailto:agusinfcoiro@gmail.com" class="btnContact col-6">Contact Us &nbsp;&nbsp; →</a>
+            </section>
+        </article>
 
-    <article class="contactUs sections" id="myContact">
-        <section class="subContact container">
-            <h2 class="h2Contact col-6">Send me a message and make something together.</h2>
-            <a href="mailto:agusinfcoiro@gmail.com" class="btnContact col-6">Contact Us &nbsp;&nbsp; →</a>
-        </section>
-    </article>
-
-    <footer class="myFooter">
         <div class="container subFooter">
             <div class="col-lg-4 footerLeft">
                 <a href="" class="footerLink"><img src="./img/logo.png" class="myLogo" alt="profile picture"><h4 class="myLogoText">&nbsp;&nbsp;Elito.</h4></a>
@@ -512,7 +547,7 @@
         <address class="myFooterAdd">Copyright © 2022 Elito. All rights reserved.</address>
     </footer>
 
-    <div class="contentArrow"><a href="#myHome" class="arrow" >↑</a></div>
+    <div class="><a href="#myHome" class="arrow" >↑</a></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <!-- Option 1: Bootstrap Bundle with Popper -->

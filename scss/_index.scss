@@ -21,14 +21,23 @@ body{
         color: $light-1-color;
     }
     .myHeader{
-            margin: 0px !important;
+            transition: top $timeTr;
+            margin:0 !important;
             .myLogoText{
                 @include h2Title($clr:$light-1-color, $fntS:25px,$fntW:800); 
-                  
+                margin:0 !important;  
             }
             .myContNav{
-                order: -1;
+                @include displayFlex($jtfCont:space-between) ;
+                .myOffCanvas{
+                    background-color: $dark-1-color;
+                    width: 70%;
+                    .myBtnClose{
+                        filter: $light-1-color-icon;
+                    }
+                }
                 .myButton{
+                    order: -1;
                     background-color: $primary-color;
                     span{
                         filter: $light-1-color-icon;
@@ -36,7 +45,7 @@ body{
                 }
                 .myNavbar{
                     .myUl{
-                        @include displayFlex ($jtfCont:space-between,$flxDir:column);
+                        @include displayFlex ($jtfCont:space-between,$flxDir:column,$algnItm:flex-start);
                         .myLi{
                             font-size: 1.0666666667rem;;
                             font-weight: 500;
@@ -60,13 +69,13 @@ body{
             }
     }
     .myMain{
-        height: 100vh;
         background-image: url("../img/bg.jpeg");
         background-repeat: no-repeat;
         background-size: 100vw 100%;
         padding-top: 60px;
         .profileSection{
                 width: 100%;
+                padding-bottom: 50px;
                  @include displayFlex ($jtfCont:space-between,$flxDir:column);
                 text-align: center;
                 .profileText{
@@ -235,7 +244,6 @@ body{
     body{
         .myHeader{
             width: 100vw ;
-            transition: top $timeTr;
             .myLogoText{
                 @include h2Title($clr:$light-1-color, $fntS:40px,$fntW:600);
             }
@@ -249,7 +257,7 @@ body{
                         @include displayFlex ($jtfCont:space-between);
                         gap: 17px;
                         .myLi{
-                            font-size: 1.0666666667rem;
+                            font-size: 1.067rem;
                             font-weight: 500;
                             line-height: 1.5;
                             color: $light-1-color;

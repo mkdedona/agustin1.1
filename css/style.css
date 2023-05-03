@@ -31,17 +31,30 @@ body p {
   color: #f1f1f1;
 }
 body .myHeader {
-  margin: 0px !important;
+  transition: top 0.4s;
+  margin: 0 !important;
 }
 body .myHeader .myLogoText {
   color: #f1f1f1;
   font-size: 25px;
   font-weight: 800;
+  margin: 0 !important;
 }
 body .myHeader .myContNav {
-  order: -1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+body .myHeader .myContNav .myOffCanvas {
+  background-color: #242424;
+  width: 70%;
+}
+body .myHeader .myContNav .myOffCanvas .myBtnClose {
+  filter: invert(100%) sepia(0%) saturate(4360%) hue-rotate(33deg) brightness(123%) contrast(89%);
 }
 body .myHeader .myContNav .myButton {
+  order: -1;
   background-color: #59c378;
 }
 body .myHeader .myContNav .myButton span {
@@ -51,7 +64,7 @@ body .myHeader .myContNav .myNavbar .myUl {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 body .myHeader .myContNav .myNavbar .myUl .myLi {
   font-size: 1.0666666667rem;
@@ -83,7 +96,6 @@ body .myHeader .myNavRight .btnCv:hover {
   border: 1px solid #59c378;
 }
 body .myMain {
-  height: 100vh;
   background-image: url("../img/bg.jpeg");
   background-repeat: no-repeat;
   background-size: 100vw 100%;
@@ -91,6 +103,7 @@ body .myMain {
 }
 body .myMain .profileSection {
   width: 100%;
+  padding-bottom: 50px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -278,7 +291,6 @@ body .contentArrow .arrow:hover {
 @media (min-width: 1200px) {
   body .myHeader {
     width: 100vw;
-    transition: top 0.4s;
   }
   body .myHeader .myLogoText {
     color: #f1f1f1;
@@ -304,7 +316,7 @@ body .contentArrow .arrow:hover {
     gap: 17px;
   }
   body .myHeader .myContNav .myNavbar .myUl .myLi {
-    font-size: 1.0666666667rem;
+    font-size: 1.067rem;
     font-weight: 500;
     line-height: 1.5;
     color: #f1f1f1;
@@ -573,6 +585,7 @@ body .contentArrow .arrow:hover {
 }
 .aboutMe .subAboutMe .sec2 {
   width: 100%;
+  padding-top: 50px;
   display: flex;
   flex-direction: column;
 }
@@ -1496,14 +1509,14 @@ body .contentArrow .arrow:hover {
 }
 
 @media (min-width: 700px) {
-  body .contactUs {
+  body .myFooter .contactUs {
     display: block;
     background: url("../img/contact.png") no-repeat;
     width: 90%;
     height: 300px;
     margin-top: 100px;
   }
-  body .contactUs .subContact {
+  body .myFooter .contactUs .subContact {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -1511,12 +1524,12 @@ body .contentArrow .arrow:hover {
     align-items: center;
     padding-top: 80px;
   }
-  body .contactUs .subContact .h2Contact {
+  body .myFooter .contactUs .subContact .h2Contact {
     color: #f1f1f1;
     font-size: 50px;
     font-weight: 600;
   }
-  body .contactUs .subContact .btnContact {
+  body .myFooter .contactUs .subContact .btnContact {
     background-color: #242424;
     width: fit-content;
     height: fit-content;

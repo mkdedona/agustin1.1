@@ -37,7 +37,8 @@
         }
         .sec2{
             width:100%;
-            display: flex;
+            padding-top:50px;
+            display:flex;
             flex-direction: column;
             .title2{
                 @include   h2Title;
