@@ -8,7 +8,7 @@
 }
 body{
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-color: $dark-1-color;
     li{
         list-style: none;
@@ -17,7 +17,7 @@ body{
         text-decoration: none;
     }
     p{
-        font-size: 20px;
+        font-size: 18px;
         color: $light-1-color;
     }
     .myHeader{
@@ -72,10 +72,10 @@ body{
         background-image: url("../img/bg.jpeg");
         background-repeat: no-repeat;
         background-size: 100vw 100%;
-        padding-top: 60px;
+        padding-top: $titPadding;
         .profileSection{
                 width: 100%;
-                padding-bottom: 50px;
+                padding-bottom:$titPadding;
                  @include displayFlex ($jtfCont:space-between,$flxDir:column);
                 text-align: center;
                 .profileText{
@@ -101,7 +101,7 @@ body{
                 }
                 .secImgProf{
                     position: relative;
-                    padding-top: 60px;
+                    padding-top: $titPadding;
                     .myProfImg{
                         width: 300px;
                         border-radius: 50%;
@@ -137,7 +137,6 @@ body{
                     font-size: 16px;
                 }
                 .subFooter{
-                    height: auto;
                     background: radial-gradient(circle at 70% 40% , $primary-color 0%, $dark-1-color 50%);
                     @include displayFlex ($flxDir:column, $jtfCont:flex-start);
                     border-bottom: $dark-2-color 2px solid;
@@ -156,25 +155,18 @@ body{
                         .redes{
                             width: 25px;
                             padding-right: 5px;
-                            filter: brightness(0)
-                                    saturate(100%)
-                                    invert(98%)
-                                    sepia(100%)
-                                    saturate(8%)
-                                    hue-rotate(118deg) 
-                                    brightness(102%)
-                                    contrast(102%);
+                            filter: $light-2-color-icon;
                         }
                     }
                 }
                 .footerMap{
                     @include displayFlex ($flxDir:column,$jtfCont:space-evenly, $algnItm:flex-start);
-                    gap:50px;
-                    padding-bottom:50px;
+                    gap:$titPadding;
+                    padding-bottom:$titPadding;
                     .colMap{
                         @include displayFlex ($flxDir:column, $jtfCont:space-evenly,$algnItm:flex-start);
                         gap: 15px;
-                        padding-top:50px;
+                        padding-top:40px;
                         h5{
                             font-weight: 600;
                         }
@@ -236,7 +228,37 @@ body{
     }
 }
 
+/*Media Queries 540px to 768px*/
 
+@media only screen and (min-width: 540px){
+body{   
+    .myMain{
+        .profileSection{
+                .secImgProf{
+                    .myProfImg{
+                        width: 400px;
+                        border-radius: 50%;
+                    }
+                    .floatIcon{
+                        width: 25%;
+                    }
+                    .iconProf1{
+                    top: 20%;
+                    right: 70%;
+                    }
+                    .iconProf2{
+                    top: 20%;
+                    right: -5%;
+                    }
+                    .iconProf3{
+                    top: 75%;
+                    right: -5%;
+                    }
+                }
+        }    
+    }
+}
+}
 
 /*Media Queries 1200px*/
 

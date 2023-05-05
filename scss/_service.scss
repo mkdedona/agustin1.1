@@ -1,10 +1,8 @@
 @import "var";
 
 .myServ{ 
-    /* background: radial-gradient(circle at 15% -5%, $secondary-hover 0,8% , $dark-1-color 35%);*/
-    /*height: 100vh;*/
     width: 100%;
-    padding: 130px 0 130px 0;
+    padding: $titPadding 0 $titPadding 0;
     @include displayFlex ($flxDir:column);
     .subArt1{
         @include displayFlex ($flxDir:column);
@@ -17,7 +15,7 @@
             @include displayFlex;
             gap: 30px;
             width: 100%;
-            padding: 50px 0 50px 0;
+            padding: $titPadding 0 $titPadding 0;
             .btnSec{
                 width: 120px;
                 background-color: $dark-3-color;
@@ -144,9 +142,25 @@
  
 }
 
+/*Media Queries 540px to 768px*/
 
-
-
+@media only screen and (min-width: 540px){
+    body{
+        .myServ{ 
+            .subArt1{
+                .title2{
+                @include h2Title($fntS:$tit700);
+                }
+            }
+        }
+        .pricing{
+            .pricingTitles{
+                .title2{
+                    @include h2Title($fntS:$tit700);
+                    }
+            }
+        }
+}
 /*Media Queries 1200px*/
 
 @media (min-width: 1200px ) {
@@ -294,5 +308,4 @@
         
     }
 }
-
-
+}

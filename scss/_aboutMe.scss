@@ -4,7 +4,7 @@
     background:
      radial-gradient(circle at 25% center,$dark-2-color,$dark-1-color,$violet-2-color);
      .subAboutMe{
-        padding: 50px 0px 130px 10px;
+        @include paddingX4($left:10px);
         @include displayFlex ($flxDir:column, $jtfCont:space-evenly ,$algnItm:flex-start);
         .sec1{
             position: relative;
@@ -16,33 +16,33 @@
                 @include displayFlex($flxDir:column, $jtfCont:flex-start);
                 z-index:0;
                 .h3litCard{
-                    color: $secondary-color;
-                    font-size: 150px;
-                    font-weight: 600;
+                    @include h2Title($clr:$secondary-color, $fntS:100px);
+                    padding-top:$titPadding;
                 }
             }
             .litCard{
                 @include cardProgram($degrees: 90deg);
                 width: 300px;
                 position: absolute;
-                top: 250px;
-                left: 150px;
+                top: 65%;
+                left: 60%;
                 z-index:1;
-
             .h4litCard{
-                color: #59C378;
-                font-size: 40px;
-            }
+                @include h2Title($clr:$primary-color, $fntS:40px);
+                }
             }
         }
         .sec2{
             width:100%;
-            padding-top:50px;
+            padding-top:$titPadding;
             display:flex;
             flex-direction: column;
-            .title2{
-                @include   h2Title;
-                font-size: $tit500;
+            .contTitleAboutMe{
+                padding-bottom: $titPadding;
+                .title2{
+                    @include   h2Title;
+                    font-size: $tit500;
+                }
             }
             .skillsCont{
                 display: flex;
@@ -118,27 +118,30 @@
         }
     }
 /*Work Experience */
-    .portfolio{
+    .workExp{
         background: radial-gradient(circle at center center, $red-color 0% , $dark-1-color 55%);
-        height: 110vh;
         width:100%;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         text-align: center;
-        .secPort1{padding-top: 150px;
+        .secExp1{
+            padding-top: $titPadding;
             color: $light-1-color;
             .title2{
                 @include h2Title;
                 font-size: $tit500;
             }
+            p{
+                padding-bottom: $titPadding;
             }
-        .secPort2{
+            }
+        .secExp2{
             @include displayFlex ($flxDir:column);
             gap: 30px;
             width: 100%;
             height: 100%;
-            padding-bottom: 100px;
+            padding-bottom: $titPadding;
             .work{
                 display:flex;
                 flex-wrap:wrap;
@@ -150,9 +153,6 @@
                 width: 100%;
                 height: 180px;
                 text-align:start;
-                .itemJob{
-
-                }
                 h3{
                     font-weight: 600;
                     font-size: 16px;
@@ -180,7 +180,71 @@
         }
     }
 
+/*Media Queries 540px to 768px*/
 
+@media only screen and (min-width: 540px){
+body{
+    .aboutMe{
+        background:
+         radial-gradient(circle at 25% center,$dark-2-color,$dark-1-color,$violet-2-color);
+         .subAboutMe{
+            @include paddingX4($left:10px);
+            @include displayFlex ($flxDir:column, $jtfCont:space-evenly ,$algnItm:flex-start);
+            .sec1{
+                position: relative;
+                .bigCard{
+                    height: 350px;
+                    width: 350px;
+                    background-image: linear-gradient(180deg,$dark-23-color,$dark-2-color);
+                    border-radius: 10px;
+                    @include displayFlex($flxDir:column, $jtfCont:flex-start);
+                    z-index:0;
+                    .h3litCard{
+                        @include h2Title($clr:$secondary-color, $fntS:100px);
+                        padding-top:$titPadding;
+                    }
+                }
+                .litCard{
+                    @include cardProgram($degrees: 90deg);
+                    width: 300px;
+                    position: absolute;
+                    top: 65%;
+                    left: 60%;
+                    z-index:1;
+                .h4litCard{
+                    @include h2Title($clr:$primary-color, $fntS:40px);
+                    }
+                }
+            }
+            .sec2{
+                .contTitleAboutMe{
+                    padding-bottom: $titPadding;
+                    .title2{
+                        @include h2Title($fntS:$tit700);
+                    }
+                }
+                .skillsCont{
+                    .skillsSub{
+                        .myProg{
+                            width: 25%;
+                            height: 130px;
+                            margin-bottom:30px ;
+                        }
+                        }
+                    }
+                }
+            }
+        }
+    /*Work Experience */
+    .workExp{
+        .secExp1{
+            .title2{
+                @include h2Title($fntS:$tit700);
+            }
+        }
+    }
+}
+}
 
 
  /*Media Queries 1200px*/
@@ -188,14 +252,14 @@
 @media (min-width: 1200px ) {
     .aboutMe{   
          .subAboutMe{
-            padding: 200px 0 130px 0;
+            @include paddingX4( $top:200, $bottom:130px);
             @include displayFlex ($jtfCont:space-around);
             height: 100vh;
             .sec1{
                 .bigCard{
                     height: 450px;
                     width: 350px;
-                    padding-top: 50px;
+                    padding-top: $titPadding;
                 }
                 .litCard{
                     top: 330px;
@@ -218,21 +282,21 @@
             }
         }
     /*Work Experience */
-        .portfolio{
+        .workExp{
             background: radial-gradient(circle at center center, $red-color 0% , $dark-1-color 55%);
             height: 110vh;
             // @include displayFlex ($flxDir:column);
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
-            .secPort1{padding-top: 150px;
+            .secExp1{padding-top: 150px;
                 color: $light-1-color;
                 width: 40%;
                 .title2{
                     @include h2Title;
                 }
                 }
-            .secPort2{
+            .secExp2{
                 @include displayFlex ($flxDir:column);
                 gap: 30px;
                 width: 100%;

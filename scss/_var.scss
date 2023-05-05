@@ -18,8 +18,22 @@ $violet-color: #730bb0;
 $violet-2-color: #49086e;
 
 $light-1-color: #f1f1f1;
-$light-1-color-icon: invert(100%) sepia(0%) saturate(4360%) hue-rotate(33deg) brightness(123%) contrast(89%);
-
+$light-1-color-icon:
+ invert(100%) 
+sepia(0%) 
+saturate(4360%) 
+hue-rotate(33deg)
+ brightness(123%)
+  contrast(89%);
+$light-2-color-icon:
+brightness(0)
+saturate(100%)
+invert(98%)
+sepia(100%)
+saturate(8%)
+hue-rotate(118deg) 
+brightness(102%)
+contrast(102%);
 $light-transparent:#00000000;
 
 $dark-1-color: #242424;
@@ -34,7 +48,10 @@ $darkT-1-color: #2424246c;
 $timeTr : 0.4s;
 /*Título para >500*/
 $tit500: 24px;
-
+/*Título para >700*/
+$tit700: 34px;
+/*padding de titulo*/
+$titPadding: 50px;
 /*MIXINS*/
 
 @mixin displayFlex ($flxDir:row, $jtfCont:center,$algnItm:center){
@@ -86,10 +103,10 @@ $tit500: 24px;
         }
   }
 
-  @mixin myOwlCar{
+  @mixin myOwlCar($width:40px,$height:40px){
     background-color: $dark-1-color !important;
-    width: 40px;
-    height: 40px;
+    width: $width;
+    height: $height;
     border: 1px solid $primary-color !important;
     border-radius: 50% !important;
     transition: $timeTr;
@@ -102,4 +119,8 @@ $tit500: 24px;
             color: $light-1-color;  
         }
     }
+  }
+
+  @mixin paddingX4( $top:$titPadding, $right:0px, $bottom:$titPadding, $left:0px ){
+    padding: $top $right $bottom $left;
   }
