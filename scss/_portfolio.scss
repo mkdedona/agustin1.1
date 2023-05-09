@@ -118,7 +118,38 @@
 /*Media Queries 540px to 768px*/
 
 @media only screen and (min-width: 540px){
-        
+body{
+    #myPortfolio{
+        .portfolio2{
+            .title2{
+                @include h2Title($fntS:$tit700);
+            }
+            .cardCont{
+                .contImg{
+                    .imgCar {
+                        height: 100% !important;
+                        width: 100% !important;
+                    }
+                }
+            }
+        }
+
+        .opinionBackground{
+            .opinions{
+               .opinionImg{
+                   width: 50%;
+               }
+           }
+       }  
+}
+}
+}
+
+
+/*Media Queries 768px*/
+
+@media only screen and (min-width: 768px){
+
 }
 
 @media (min-width: 1200px ) {

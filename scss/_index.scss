@@ -29,6 +29,7 @@ body{
             }
             .myContNav{
                 @include displayFlex($jtfCont:space-between) ;
+                @include paddingX4( $top:10px, $right:30px, $bottom:10px, $left:30px );
                 .myOffCanvas{
                     background-color: $dark-1-color;
                     width: 70%;
@@ -63,7 +64,7 @@ body{
                 @include displayFlex;
                 .btnCv{
                     @include bnt1;    
-                    padding: 8px 5px;
+                    padding: 10px 14px;
     
                 }
             }
@@ -260,7 +261,7 @@ body{
 }
 }
 
-/*Media Queries 1200px*/
+/*Media Queries < 1200px*/
 
 @media (min-width: 1200px ) {
     body{
