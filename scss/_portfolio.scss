@@ -152,7 +152,8 @@ body{
 
 }
 
-@media (min-width: 1200px ) {
+/*Media Queries 992px*/
+@media (min-width: 992px ) {
     body{
         .portfolio2{
             height: 100vh;
@@ -219,17 +220,9 @@ body{
                 @include displayFlex;
                 color: $light-1-color;
                 .opinionImg{
-                    height: 50%;
-                    @include paddingX4( $top:60px, $bottom:0px, $left:80px );
                     .imgopion{
-                        border-radius: 50%;
-                        box-shadow:
-                        0 0 0 15px $dark-4-color,
-                        0 0 0 30px $dark-1-color,
-                        0 0 0 70px $dark-2-color,
-                        0 0 0 90px $dark-3-color,
-                        0 0 0 110px $dark-23-color,
-                        0 0 0 150px $dark-4-color;
+                        width:60%;
+
                     }
                 }
                 .opinionText{

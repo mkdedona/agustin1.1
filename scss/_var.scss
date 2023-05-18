@@ -46,12 +46,18 @@ $darkT-1-color: #2424246c;
  
 /*TIME in Transition*/
 $timeTr : 0.4s;
-/*Título para >500*/
+/*Título para hasta 540*/
 $tit500: 24px;
-/*Título para >700*/
+/*Título para hasta 768*/
 $tit700: 34px;
+/*Título para hasta 992*/
+$tit900: 45px;
 /*padding de titulo*/
-$titPadding: 50px;
+$titPadding: 60px;
+/*padding de secciones*/
+$titPadding80: 80px;
+/*padding de secciones grande*/
+$titPadding90: 90px;
 /*MIXINS*/
 
 @mixin displayFlex ($flxDir:row, $jtfCont:center,$algnItm:center){
@@ -63,14 +69,14 @@ $titPadding: 50px;
 
 @mixin bnt1($bgr: $primary-color, $bgrH:$primary-hover,
                 $bdr:$primary-color,  $bdrH:$primary-color,
-                $clr:$light-1-color,  $clrH:$light-1-color) {
+                $clr:$light-1-color,  $clrH:$light-1-color,$padding:15px 25px, $fntS:17px,$fntW:500) {
     background-color: $bgr;
     color: $clr;
     border: 1px solid $bdr;
-    font-weight: 500;
-    font-size: 17px;
+    font-weight: $fntW;
+    font-size: $fntS;
     border-radius: 40px;
-    padding: 15px 25px;
+    padding:$padding;
     transition: $timeTr;
     &:hover{
         background-color: $primary-hover;

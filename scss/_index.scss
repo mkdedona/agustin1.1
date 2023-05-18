@@ -53,9 +53,11 @@ body{
                             line-height: 1.5;
                             color: $light-1-color;
                             border-bottom: 3px solid $dark-1-color;
-            
                         }
-            
+                        .activeLi{
+                            color: $light-1-color;
+                            border-bottom: 3px solid $primary-color;
+                        }
                     }
                 }
             }
@@ -63,9 +65,7 @@ body{
             .myNavRight{
                 @include displayFlex;
                 .btnCv{
-                    @include bnt1;    
-                    padding: 10px 14px;
-    
+                    @include bnt1($padding:10px 14px);    
                 }
             }
     }
@@ -82,22 +82,20 @@ body{
                 .profileText{
                     padding-top: 10%;
                     .myH1{
-                        font-size: 35px;
-                        font-weight: 700;
-                        color: $secondary-color;
+                        @include h2Title($clr:$secondary-color, $fntS:35px,$fntW:700);
                         .mySpam{
-                            font-size: 40px;
-                            font-weight: 700;
-                            color: $light-1-color;
+                              @include h2Title($clr:$light-1-color, $fntS:40px,$fntW:700);
                         }
                     }
                     .profileH2{
                         @include   h2Title($clr:$primary-color, $fntS:20px);
     
                     }
+                    p{
+                        margin-bottom:$titPadding;
+                    }
                     .btnMain{
-                        @include bnt1;
-                        padding: 8px 5px;
+                        @include bnt1($padding:10px 14px);
                     }
                 }
                 .secImgProf{
@@ -230,30 +228,69 @@ body{
 }
 
 /*Media Queries 540px to 768px*/
-
 @media only screen and (min-width: 540px){
 body{   
+    .myHeader{
+        .myContNav{
+            .myLogoText{
+                @include h2Title($fntS:38px,$fntW:800); 
+            }
+        }
+        .myNavRight{
+            .btnCv{
+                @include bnt1($fntW:700);    
+            }
+        }
+    }
     .myMain{
+        .profileSection{
+            .profileText{
+                .myH1{
+                    @include h2Title($clr:$secondary-color, $fntS:35px,$fntW:800);
+                }
+                .btnMain{
+                    @include bnt1($padding:15px 18px,$fntW:700);
+                }
+            }    
+            .secImgProf{
+                .myProfImg{
+                    width: 400px;
+                }
+                .floatIcon{
+                    width: 25%;
+                }
+                .iconProf1{
+                right: 80%;
+                }
+            }
+        }
+}
+}
+}
+
+/*Media Queries 768px to 992px*/
+@media only screen and (min-width: 768px){
+body{
+    .myMain{
+        padding-bottom: $titPadding80;
         .profileSection{
                 .secImgProf{
                     .myProfImg{
-                        width: 400px;
-                        border-radius: 50%;
+                        width: 450px;
                     }
                     .floatIcon{
                         width: 25%;
                     }
                     .iconProf1{
-                    top: 20%;
-                    right: 70%;
+                    right: 80%;
                     }
                     .iconProf2{
-                    top: 20%;
-                    right: -5%;
+
+                    right: -10%;
                     }
                     .iconProf3{
-                    top: 75%;
-                    right: -5%;
+
+                    right: -10%;
                     }
                 }
         }    
@@ -261,8 +298,83 @@ body{
 }
 }
 
-/*Media Queries < 1200px*/
+/*Media Queries 992px por medidas de navbar de bootstrap en lg(large)*/
+@media only screen and (min-width: 992px){
+body{
+    .myHeader{
+        .myContNav{
+            @include displayFlex($jtfCont:center);
+            @include paddingX4( $top:10px, $right:30px, $bottom:10px, $left:30px );
+            .myButton{
+                order: 0;
+                background-color: $primary-color;
+                span{
+                    filter: $light-1-color-icon;
+                } 
+            }
+            .myNavbar{
+                .myUl{
+                    @include displayFlex;
+                    .myLi{
+                        border-bottom: 3px solid $light-transparent;
+                        &:hover{
+                            color: $light-1-color;
+                            border-bottom: 3px solid $primary-color;
+                        }
+                    } 
+                    .activeLi{
+                        color: $light-1-color;
+                        border-bottom: 3px solid $primary-color;
+                    }
+                }
+            }
+        }
+}
 
+.myMain{
+    .profileSection{
+        @include displayFlex ($jtfCont:space-between);
+        text-align: start;
+        .profileText{
+            .myH1{
+                @include h2Title($clr:$secondary-color, $fntS:40px,$fntW:800);
+                .mySpam{
+                    @include h2Title($clr:$light-1-color, $fntS:55px,$fntW:800);
+                }
+            }
+            .profileH2{
+                    @include h2Title($clr:$primary-color, $fntS:25px,$fntW:600);
+            }
+            p{
+                width:80%;
+            }
+            .btnMain{
+                @include bnt1($padding:18px 28px,$fntW:700);
+            }
+        }
+        .secImgProf{
+            .floatIcon{
+                border: $light-1-color solid 20px;
+            }
+            .iconProf1{
+                top:30%;
+                right: 75%;
+            }
+            .iconProf2{
+                top:30%;
+                right:0%;
+            }
+            .iconProf3{
+                top:75%;
+                right:10%;
+            }
+        }
+    }
+}
+}
+}
+
+/*Media Queries < 1200px*/
 @media (min-width: 1200px ) {
     body{
         .myHeader{
@@ -272,12 +384,11 @@ body{
             }
             .myContNav{
                 order: 0;
-                display: flex;
-                justify-content: center;
+                @include paddingX4( $top:10px, $bottom:10px);
                 .myNavbar{
                     @include displayFlex;
                     .myUl{
-                        @include displayFlex ($jtfCont:space-between);
+                        @include displayFlex ($jtfCont:center);
                         gap: 17px;
                         .myLi{
                             font-size: 1.067rem;
@@ -293,7 +404,6 @@ body{
                         .activeLi{
                             color: $light-1-color;
                             border-bottom: 3px solid $primary-color;
-                    
                         }
                     }
                 }
@@ -328,26 +438,26 @@ body{
                 .secImgProf{
                     position: relative;
                     .myProfImg{
-                        margin-top: 30%;
-                        margin-left: 15%; 
+                        margin-top: 10%;
+                        margin-left: 10%; 
                         position: relative;
-                        width: 500px;
+                        width: 95%;
                     }
                     .floatIcon{
                         width: 17%;
                         border: $light-1-color solid 20px;
                     }
                     .iconProf1{
-                    top: 40%;
-                    right: 67%;
+                    top: 35%;
+                    right: 70%;
                     }
                     .iconProf2{
-                    top: 40%;
-                    right: 10%;
+                    top: 35%;
+                    right: 0%;
                     }
                     .iconProf3{
                     top: 85%;
-                    right: 10%;
+                    right: 0%;
                     }
                     }
             }

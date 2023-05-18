@@ -1,15 +1,21 @@
 @charset "UTF-8";
 /*VARIABLES DE COLOR*/
 /*TIME in Transition*/
-/*Título para >500*/
-/*Título para >700*/
+/*Título para hasta 540*/
+/*Título para hasta 768*/
+/*Título para hasta 992*/
 /*padding de titulo*/
+/*padding de secciones*/
+/*padding de secciones grande*/
 /*MIXINS*/
 /*VARIABLES DE COLOR*/
 /*TIME in Transition*/
-/*Título para >500*/
-/*Título para >700*/
+/*Título para hasta 540*/
+/*Título para hasta 768*/
+/*Título para hasta 992*/
 /*padding de titulo*/
+/*padding de secciones*/
+/*padding de secciones grande*/
 /*MIXINS*/
 * {
   padding: 0%;
@@ -78,6 +84,10 @@ body .myHeader .myContNav .myNavbar .myUl .myLi {
   color: #f1f1f1;
   border-bottom: 3px solid #242424;
 }
+body .myHeader .myContNav .myNavbar .myUl .activeLi {
+  color: #f1f1f1;
+  border-bottom: 3px solid #59c378;
+}
 body .myHeader .myNavRight {
   display: flex;
   flex-direction: row;
@@ -91,9 +101,8 @@ body .myHeader .myNavRight .btnCv {
   font-weight: 500;
   font-size: 17px;
   border-radius: 40px;
-  padding: 15px 25px;
-  transition: 0.4s;
   padding: 10px 14px;
+  transition: 0.4s;
 }
 body .myHeader .myNavRight .btnCv:hover {
   background-color: #41b362;
@@ -104,11 +113,11 @@ body .myMain {
   background-image: url("../img/bg.jpeg");
   background-repeat: no-repeat;
   background-size: 100vw 100%;
-  padding-top: 50px;
+  padding-top: 60px;
 }
 body .myMain .profileSection {
   width: 100%;
-  padding-bottom: 50px;
+  padding-bottom: 60px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -119,19 +128,22 @@ body .myMain .profileSection .profileText {
   padding-top: 10%;
 }
 body .myMain .profileSection .profileText .myH1 {
+  color: #ffe600;
   font-size: 35px;
   font-weight: 700;
-  color: #ffe600;
 }
 body .myMain .profileSection .profileText .myH1 .mySpam {
+  color: #f1f1f1;
   font-size: 40px;
   font-weight: 700;
-  color: #f1f1f1;
 }
 body .myMain .profileSection .profileText .profileH2 {
   color: #59c378;
   font-size: 20px;
   font-weight: 600;
+}
+body .myMain .profileSection .profileText p {
+  margin-bottom: 60px;
 }
 body .myMain .profileSection .profileText .btnMain {
   background-color: #59c378;
@@ -140,9 +152,8 @@ body .myMain .profileSection .profileText .btnMain {
   font-weight: 500;
   font-size: 17px;
   border-radius: 40px;
-  padding: 15px 25px;
+  padding: 10px 14px;
   transition: 0.4s;
-  padding: 8px 5px;
 }
 body .myMain .profileSection .profileText .btnMain:hover {
   background-color: #41b362;
@@ -151,7 +162,7 @@ body .myMain .profileSection .profileText .btnMain:hover {
 }
 body .myMain .profileSection .secImgProf {
   position: relative;
-  padding-top: 50px;
+  padding-top: 60px;
 }
 body .myMain .profileSection .secImgProf .myProfImg {
   width: 300px;
@@ -221,8 +232,8 @@ body .myFooter .footerMap {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: flex-start;
-  gap: 50px;
-  padding-bottom: 50px;
+  gap: 60px;
+  padding-bottom: 60px;
 }
 body .myFooter .footerMap .colMap {
   display: flex;
@@ -293,24 +304,164 @@ body .contentArrow .arrow:hover {
 
 /*Media Queries 540px to 768px*/
 @media only screen and (min-width: 540px) {
+  body .myHeader .myContNav .myLogoText {
+    color: #f1f1f1;
+    font-size: 38px;
+    font-weight: 800;
+  }
+  body .myHeader .myNavRight .btnCv {
+    background-color: #59c378;
+    color: #f1f1f1;
+    border: 1px solid #59c378;
+    font-weight: 700;
+    font-size: 17px;
+    border-radius: 40px;
+    padding: 15px 25px;
+    transition: 0.4s;
+  }
+  body .myHeader .myNavRight .btnCv:hover {
+    background-color: #41b362;
+    color: #f1f1f1;
+    border: 1px solid #59c378;
+  }
+  body .myMain .profileSection .profileText .myH1 {
+    color: #ffe600;
+    font-size: 35px;
+    font-weight: 800;
+  }
+  body .myMain .profileSection .profileText .btnMain {
+    background-color: #59c378;
+    color: #f1f1f1;
+    border: 1px solid #59c378;
+    font-weight: 700;
+    font-size: 17px;
+    border-radius: 40px;
+    padding: 15px 18px;
+    transition: 0.4s;
+  }
+  body .myMain .profileSection .profileText .btnMain:hover {
+    background-color: #41b362;
+    color: #f1f1f1;
+    border: 1px solid #59c378;
+  }
   body .myMain .profileSection .secImgProf .myProfImg {
     width: 400px;
-    border-radius: 50%;
   }
   body .myMain .profileSection .secImgProf .floatIcon {
     width: 25%;
   }
   body .myMain .profileSection .secImgProf .iconProf1 {
-    top: 20%;
-    right: 70%;
+    right: 80%;
+  }
+}
+/*Media Queries 768px to 992px*/
+@media only screen and (min-width: 768px) {
+  body .myMain {
+    padding-bottom: 80px;
+  }
+  body .myMain .profileSection .secImgProf .myProfImg {
+    width: 450px;
+  }
+  body .myMain .profileSection .secImgProf .floatIcon {
+    width: 25%;
+  }
+  body .myMain .profileSection .secImgProf .iconProf1 {
+    right: 80%;
   }
   body .myMain .profileSection .secImgProf .iconProf2 {
-    top: 20%;
-    right: -5%;
+    right: -10%;
+  }
+  body .myMain .profileSection .secImgProf .iconProf3 {
+    right: -10%;
+  }
+}
+/*Media Queries 992px por medidas de navbar de bootstrap en lg(large)*/
+@media only screen and (min-width: 992px) {
+  body .myHeader .myContNav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 30px 10px 30px;
+  }
+  body .myHeader .myContNav .myButton {
+    order: 0;
+    background-color: #59c378;
+  }
+  body .myHeader .myContNav .myButton span {
+    filter: invert(100%) sepia(0%) saturate(4360%) hue-rotate(33deg) brightness(123%) contrast(89%);
+  }
+  body .myHeader .myContNav .myNavbar .myUl {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  body .myHeader .myContNav .myNavbar .myUl .myLi {
+    border-bottom: 3px solid rgba(0, 0, 0, 0);
+  }
+  body .myHeader .myContNav .myNavbar .myUl .myLi:hover {
+    color: #f1f1f1;
+    border-bottom: 3px solid #59c378;
+  }
+  body .myHeader .myContNav .myNavbar .myUl .activeLi {
+    color: #f1f1f1;
+    border-bottom: 3px solid #59c378;
+  }
+  body .myMain .profileSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: start;
+  }
+  body .myMain .profileSection .profileText .myH1 {
+    color: #ffe600;
+    font-size: 40px;
+    font-weight: 800;
+  }
+  body .myMain .profileSection .profileText .myH1 .mySpam {
+    color: #f1f1f1;
+    font-size: 55px;
+    font-weight: 800;
+  }
+  body .myMain .profileSection .profileText .profileH2 {
+    color: #59c378;
+    font-size: 25px;
+    font-weight: 600;
+  }
+  body .myMain .profileSection .profileText p {
+    width: 80%;
+  }
+  body .myMain .profileSection .profileText .btnMain {
+    background-color: #59c378;
+    color: #f1f1f1;
+    border: 1px solid #59c378;
+    font-weight: 700;
+    font-size: 17px;
+    border-radius: 40px;
+    padding: 18px 28px;
+    transition: 0.4s;
+  }
+  body .myMain .profileSection .profileText .btnMain:hover {
+    background-color: #41b362;
+    color: #f1f1f1;
+    border: 1px solid #59c378;
+  }
+  body .myMain .profileSection .secImgProf .floatIcon {
+    border: #f1f1f1 solid 20px;
+  }
+  body .myMain .profileSection .secImgProf .iconProf1 {
+    top: 30%;
+    right: 75%;
+  }
+  body .myMain .profileSection .secImgProf .iconProf2 {
+    top: 30%;
+    right: 0%;
   }
   body .myMain .profileSection .secImgProf .iconProf3 {
     top: 75%;
-    right: -5%;
+    right: 10%;
   }
 }
 /*Media Queries < 1200px*/
@@ -325,8 +476,7 @@ body .contentArrow .arrow:hover {
   }
   body .myHeader .myContNav {
     order: 0;
-    display: flex;
-    justify-content: center;
+    padding: 10px 0px 10px 0px;
   }
   body .myHeader .myContNav .myNavbar {
     display: flex;
@@ -337,7 +487,7 @@ body .contentArrow .arrow:hover {
   body .myHeader .myContNav .myNavbar .myUl {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     gap: 17px;
   }
@@ -416,26 +566,26 @@ body .contentArrow .arrow:hover {
     position: relative;
   }
   body .myMain .profileSection .secImgProf .myProfImg {
-    margin-top: 30%;
-    margin-left: 15%;
+    margin-top: 10%;
+    margin-left: 10%;
     position: relative;
-    width: 500px;
+    width: 95%;
   }
   body .myMain .profileSection .secImgProf .floatIcon {
     width: 17%;
     border: #f1f1f1 solid 20px;
   }
   body .myMain .profileSection .secImgProf .iconProf1 {
-    top: 40%;
-    right: 67%;
+    top: 35%;
+    right: 70%;
   }
   body .myMain .profileSection .secImgProf .iconProf2 {
-    top: 40%;
-    right: 10%;
+    top: 35%;
+    right: 0%;
   }
   body .myMain .profileSection .secImgProf .iconProf3 {
     top: 85%;
-    right: 10%;
+    right: 0%;
   }
   body .myFooter {
     background-color: #242424;
@@ -555,15 +705,18 @@ body .contentArrow .arrow:hover {
 }
 /*VARIABLES DE COLOR*/
 /*TIME in Transition*/
-/*Título para >500*/
-/*Título para >700*/
+/*Título para hasta 540*/
+/*Título para hasta 768*/
+/*Título para hasta 992*/
 /*padding de titulo*/
+/*padding de secciones*/
+/*padding de secciones grande*/
 /*MIXINS*/
 .aboutMe {
   background: radial-gradient(circle at 25% center, #27292d, #242424, #49086e);
+  padding: 60px 0px 60px 10px;
 }
 .aboutMe .subAboutMe {
-  padding: 50px 0px 50px 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -587,7 +740,7 @@ body .contentArrow .arrow:hover {
   color: #ffe600;
   font-size: 100px;
   font-weight: 600;
-  padding-top: 50px;
+  padding-top: 60px;
 }
 .aboutMe .subAboutMe .sec1 .litCard {
   border-radius: 10px;
@@ -615,12 +768,12 @@ body .contentArrow .arrow:hover {
 }
 .aboutMe .subAboutMe .sec2 {
   width: 100%;
-  padding-top: 50px;
+  padding-top: 60px;
   display: flex;
   flex-direction: column;
 }
 .aboutMe .subAboutMe .sec2 .contTitleAboutMe {
-  padding-bottom: 50px;
+  padding-bottom: 60px;
 }
 .aboutMe .subAboutMe .sec2 .contTitleAboutMe .title2 {
   color: #f1f1f1;
@@ -746,10 +899,10 @@ body .contentArrow .arrow:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  text-align: center;
+  align-items: center;
+  padding: 60px 0px 60px 0px;
 }
 .workExp .secExp1 {
-  padding-top: 50px;
   color: #f1f1f1;
 }
 .workExp .secExp1 .title2 {
@@ -759,7 +912,7 @@ body .contentArrow .arrow:hover {
   font-size: 24px;
 }
 .workExp .secExp1 p {
-  padding-bottom: 50px;
+  padding-bottom: 60px;
 }
 .workExp .secExp2 {
   display: flex;
@@ -769,7 +922,6 @@ body .contentArrow .arrow:hover {
   gap: 30px;
   width: 100%;
   height: 100%;
-  padding-bottom: 50px;
 }
 .workExp .secExp2 .work {
   display: flex;
@@ -816,7 +968,6 @@ body .contentArrow .arrow:hover {
     background: radial-gradient(circle at 25% center, #27292d, #242424, #49086e);
   }
   body .aboutMe .subAboutMe {
-    padding: 50px 0px 50px 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -840,7 +991,7 @@ body .contentArrow .arrow:hover {
     color: #ffe600;
     font-size: 100px;
     font-weight: 600;
-    padding-top: 50px;
+    padding-top: 60px;
   }
   body .aboutMe .subAboutMe .sec1 .litCard {
     border-radius: 10px;
@@ -867,7 +1018,7 @@ body .contentArrow .arrow:hover {
     font-weight: 600;
   }
   body .aboutMe .subAboutMe .sec2 .contTitleAboutMe {
-    padding-bottom: 50px;
+    padding-bottom: 60px;
   }
   body .aboutMe .subAboutMe .sec2 .contTitleAboutMe .title2 {
     color: #f1f1f1;
@@ -885,53 +1036,123 @@ body .contentArrow .arrow:hover {
     font-weight: 600;
   }
 }
-/*Media Queries 1200px*/
-@media (min-width: 1200px) {
-  .aboutMe .subAboutMe {
-    padding: 200 0px 130px 0px;
+/*Media Queries 768px to 992px*/
+@media only screen and (min-width: 768px) {
+  body {
+    /*Work Experience */
+  }
+  body .aboutMe .subAboutMe .sec1 .bigCard .h3litCard {
+    color: #ffe600;
+    font-size: 130px;
+    font-weight: 800;
+  }
+  body .aboutMe .subAboutMe .sec1 .litCard {
+    top: 80%;
+    left: 50%;
+  }
+  body .aboutMe .subAboutMe .sec1 .litCard .h4litCard {
+    padding: 25px 0px 25px 0px;
+  }
+  body .aboutMe .subAboutMe .sec2 {
+    padding-top: 0;
+  }
+  body .aboutMe .subAboutMe .sec2 .contTitleAboutMe .title2 {
+    color: #f1f1f1;
+    font-size: 45px;
+    font-weight: 600;
+    padding-top: 60px;
+  }
+  body .workExp {
+    padding: 80px 0px 80px 0px;
+  }
+  body .workExp .secExp1 .title2 {
+    color: #f1f1f1;
+    font-size: 45px;
+    font-weight: 600;
+  }
+}
+/*Media Queries 992px por medidas de navbar de bootstrap en lg(large)*/
+@media only screen and (min-width: 992px) {
+  body {
+    /*Work Experience */
+  }
+  body .aboutMe {
+    padding: 60px 0px 0 0px;
+  }
+  body .aboutMe .subAboutMe {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    height: 100vh;
   }
-  .aboutMe .subAboutMe .sec1 .bigCard {
+  body .aboutMe .subAboutMe .sec1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+  }
+  body .aboutMe .subAboutMe .sec1 .bigCard {
     height: 450px;
     width: 350px;
-    padding-top: 50px;
   }
-  .aboutMe .subAboutMe .sec1 .litCard {
-    top: 330px;
-    right: 150px;
+  body .aboutMe .subAboutMe .sec1 .bigCard .h3litCard {
+    color: #ffe600;
+    font-size: 130px;
+    font-weight: 800;
+    padding-top: 60px;
   }
-  .aboutMe .subAboutMe .sec2 .title2 {
-    color: #f1f1f1;
-    font-size: 50px;
+  body .aboutMe .subAboutMe .sec1 .litCard {
+    width: 300px;
+    top: 65%;
+    left: 20%;
+  }
+  body .aboutMe .subAboutMe .sec1 .litCard .h4litCard {
+    color: #59c378;
+    font-size: 40px;
     font-weight: 600;
   }
-  .aboutMe .subAboutMe .sec2 .skillsCont .skillsSub .myProg {
-    width: 180px;
-    height: 180px;
+  body .aboutMe .subAboutMe .sec2 {
+    width: 100%;
   }
-  /*Work Experience */
-  .workExp {
-    background: radial-gradient(circle at center center, #dd503c 0%, #242424 55%);
-    height: 110vh;
+  body .aboutMe .subAboutMe .sec2 .contTitleAboutMe {
+    padding-bottom: 60px;
+  }
+  body .aboutMe .subAboutMe .sec2 .contTitleAboutMe .title2 {
+    color: #f1f1f1;
+    font-size: 45px;
+    font-weight: 600;
+  }
+  body .aboutMe .subAboutMe .sec2 .skillsCont .skillsSub {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+    width: 100%;
+  }
+  body .aboutMe .subAboutMe .sec2 .skillsCont .skillsSub .myProg {
+    width: 130px;
+    height: 130px;
+    margin: 0 10px 30px 0px;
+  }
+  body .workExp {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
+    padding: 90px 0px 90px 0px;
+    text-align: center;
   }
-  .workExp .secExp1 {
-    padding-top: 150px;
-    color: #f1f1f1;
-    width: 40%;
+  body .workExp .secExp1 {
+    width: 50%;
   }
-  .workExp .secExp1 .title2 {
+  body .workExp .secExp1 .title2 {
     color: #f1f1f1;
-    font-size: 50px;
+    font-size: 45px;
     font-weight: 600;
   }
-  .workExp .secExp2 {
+  body .workExp .secExp2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -939,9 +1160,8 @@ body .contentArrow .arrow:hover {
     gap: 30px;
     width: 100%;
     height: 100%;
-    padding-bottom: 100px;
   }
-  .workExp .secExp2 .work {
+  body .workExp .secExp2 .work {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -952,31 +1172,100 @@ body .contentArrow .arrow:hover {
     width: 100%;
     height: 120px;
   }
-  .workExp .secExp2 .work h3 {
+  body .workExp .secExp2 .work h3 {
     font-weight: 600;
     font-size: 35px;
   }
-  .workExp .secExp2 .work img {
+  body .workExp .secExp2 .work img {
     width: 90px;
   }
-  .workExp .secExp2 .work p {
+  body .workExp .secExp2 .work p {
     color: #dd503c;
     font-size: 15px;
   }
-  .workExp .secExp2 .work a {
+  body .workExp .secExp2 .work a {
+    color: #f1f1f1;
+    font-weight: 600;
+  }
+}
+/*Media Queries 1200px*/
+@media (min-width: 1200px) {
+  body {
+    /*Work Experience */
+  }
+  body .aboutMe .subAboutMe {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+  }
+  body .aboutMe .subAboutMe .sec1 .bigCard {
+    width: 60%;
+    height: 450px;
+  }
+  body .aboutMe .subAboutMe .sec1 .litCard {
+    top: 65%;
+    left: 30%;
+  }
+  body .aboutMe .subAboutMe .sec2 .title2 {
+    color: #f1f1f1;
+    font-size: 50px;
+    font-weight: 600;
+  }
+  body .aboutMe .subAboutMe .sec2 .skillsCont .skillsSub .myProg {
+    width: 180px;
+    height: 180px;
+    margin: 20px auto;
+  }
+  body .workExp .secExp2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    height: 100%;
+  }
+  body .workExp .secExp2 .work {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #27292d;
+    border-radius: 10px;
+    color: #f1f1f1;
+    width: 100%;
+    height: 120px;
+  }
+  body .workExp .secExp2 .work h3 {
+    font-weight: 600;
+    font-size: 35px;
+  }
+  body .workExp .secExp2 .work img {
+    width: 90px;
+  }
+  body .workExp .secExp2 .work p {
+    color: #dd503c;
+    font-size: 15px;
+  }
+  body .workExp .secExp2 .work a {
     color: #f1f1f1;
     font-weight: 600;
   }
 }
 /*VARIABLES DE COLOR*/
 /*TIME in Transition*/
-/*Título para >500*/
-/*Título para >700*/
+/*Título para hasta 540*/
+/*Título para hasta 768*/
+/*Título para hasta 992*/
 /*padding de titulo*/
+/*padding de secciones*/
+/*padding de secciones grande*/
 /*MIXINS*/
 .myServ {
   width: 100%;
-  padding: 50px 0 50px 0;
+  padding: 60px 0 60px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1002,7 +1291,7 @@ body .contentArrow .arrow:hover {
   align-items: center;
   gap: 30px;
   width: 100%;
-  padding: 50px 0 50px 0;
+  padding: 60px 0 60px 0;
 }
 .myServ .subArt1 .secciones1 .btnSec {
   width: 120px;
@@ -1325,9 +1614,12 @@ body .contentArrow .arrow:hover {
 }
 /*VARIABLES DE COLOR*/
 /*TIME in Transition*/
-/*Título para >500*/
-/*Título para >700*/
+/*Título para hasta 540*/
+/*Título para hasta 768*/
+/*Título para hasta 992*/
 /*padding de titulo*/
+/*padding de secciones*/
+/*padding de secciones grande*/
 /*MIXINS*/
 /*portfolio*/
 .portfolio2 {
@@ -1413,8 +1705,8 @@ body .contentArrow .arrow:hover {
 /*Opinion*/
 .opinionBackground {
   background: radial-gradient(circle at 50% 70%, rgba(172, 138, 19, 0.4941176471) 0%, #242424 40%);
-  padding: 150px 0 50px 0;
-  padding: 150px 0px 50px 0px;
+  padding: 150px 0 60px 0;
+  padding: 150px 0px 60px 0px;
 }
 .opinionBackground .opinions {
   text-align: center;
@@ -1467,7 +1759,8 @@ body .contentArrow .arrow:hover {
   }
 }
 /*Media Queries 768px*/
-@media (min-width: 1200px) {
+/*Media Queries 992px*/
+@media (min-width: 992px) {
   body {
     /*Opinion*/
   }
@@ -1554,13 +1847,8 @@ body .contentArrow .arrow:hover {
     align-items: center;
     color: #f1f1f1;
   }
-  body .opinionBackground .opinions .opinionImg {
-    height: 50%;
-    padding: 60px 0px 0px 80px;
-  }
   body .opinionBackground .opinions .opinionImg .imgopion {
-    border-radius: 50%;
-    box-shadow: 0 0 0 15px #aaaaaa, 0 0 0 30px #242424, 0 0 0 70px #27292d, 0 0 0 90px #555555, 0 0 0 110px #414141, 0 0 0 150px #aaaaaa;
+    width: 60%;
   }
   body .opinionBackground .opinions .opinionText h3 {
     font-weight: 600;
@@ -1578,14 +1866,17 @@ body .contentArrow .arrow:hover {
 }
 /*VARIABLES DE COLOR*/
 /*TIME in Transition*/
-/*Título para >500*/
-/*Título para >700*/
+/*Título para hasta 540*/
+/*Título para hasta 768*/
+/*Título para hasta 992*/
 /*padding de titulo*/
+/*padding de secciones*/
+/*padding de secciones grande*/
 /*MIXINS*/
 .myBlog {
   background-color: #242424;
   width: 100%;
-  padding-bottom: 50px;
+  padding-bottom: 60px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1716,9 +2007,12 @@ body .contentArrow .arrow:hover {
 }
 /*VARIABLES DE COLOR*/
 /*TIME in Transition*/
-/*Título para >500*/
-/*Título para >700*/
+/*Título para hasta 540*/
+/*Título para hasta 768*/
+/*Título para hasta 992*/
 /*padding de titulo*/
+/*padding de secciones*/
+/*padding de secciones grande*/
 /*MIXINS*/
 .contactUs {
   display: none;

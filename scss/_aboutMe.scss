@@ -3,8 +3,8 @@
 .aboutMe{
     background:
      radial-gradient(circle at 25% center,$dark-2-color,$dark-1-color,$violet-2-color);
+     @include paddingX4($left:10px);
      .subAboutMe{
-        @include paddingX4($left:10px);
         @include displayFlex ($flxDir:column, $jtfCont:space-evenly ,$algnItm:flex-start);
         .sec1{
             position: relative;
@@ -121,12 +121,9 @@
     .workExp{
         background: radial-gradient(circle at center center, $red-color 0% , $dark-1-color 55%);
         width:100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        text-align: center;
+        @include displayFlex ($flxDir:column,$jtfCont:space-evenly);
+        @include paddingX4;
         .secExp1{
-            padding-top: $titPadding;
             color: $light-1-color;
             .title2{
                 @include h2Title;
@@ -141,7 +138,6 @@
             gap: 30px;
             width: 100%;
             height: 100%;
-            padding-bottom: $titPadding;
             .work{
                 display:flex;
                 flex-wrap:wrap;
@@ -181,14 +177,12 @@
     }
 
 /*Media Queries 540px to 768px*/
-
 @media only screen and (min-width: 540px){
 body{
     .aboutMe{
         background:
          radial-gradient(circle at 25% center,$dark-2-color,$dark-1-color,$violet-2-color);
          .subAboutMe{
-            @include paddingX4($left:10px);
             @include displayFlex ($flxDir:column, $jtfCont:space-evenly ,$algnItm:flex-start);
             .sec1{
                 position: relative;
@@ -246,24 +240,157 @@ body{
 }
 }
 
+/*Media Queries 768px to 992px*/
+@media only screen and (min-width: 768px){
+body{
+    .aboutMe{
+        .subAboutMe{
+            .sec1{
+                .bigCard{
+                    .h3litCard{
+                        @include h2Title($clr:$secondary-color, $fntS:130px,$fntW:800);
+                    }
+                }
+                .litCard{
+                    top: 80%;
+                    left: 50%;
+                    .h4litCard{
+                        @include paddingX4( $top:25px, $bottom:25px);
+                    }        
+                }
+            }
+            .sec2{
+                padding-top:0;
+                .contTitleAboutMe{
+                    .title2{
+                        @include h2Title($fntS:$tit900); 
+                        padding-top:$titPadding;
+                    }
+                }
+            }
+        }
+}
+ /*Work Experience */
+ .workExp{
+    @include paddingX4($top:$titPadding80,$bottom:$titPadding80);
+    .secExp1{
+        .title2{
+            @include h2Title($fntS:$tit900);
+        }
+    }
+}
+}
+}
+
+/*Media Queries 992px por medidas de navbar de bootstrap en lg(large)*/
+@media only screen and (min-width: 992px){
+body{
+    .aboutMe{
+        @include paddingX4( $top:$titPadding, $bottom:0);
+         .subAboutMe{
+            @include displayFlex;
+            .sec1{
+                @include displayFlex($jtfCont:start);;
+                .bigCard{
+                    height: 450px;
+                    width: 350px;
+                    .h3litCard{
+                        @include h2Title($clr:$secondary-color, $fntS:130px,$fntW:800);
+                        padding-top:$titPadding;
+                    }
+                }
+                .litCard{
+                    width: 300px;
+                    top: 65%;
+                    left: 20%;
+                .h4litCard{
+                    @include h2Title($clr:$primary-color, $fntS:40px);
+                    }
+                }
+            }
+            .sec2{
+                width:100%;
+                .contTitleAboutMe{
+                    padding-bottom: $titPadding;
+                    .title2{
+                        @include h2Title($fntS:$tit900);
+                    }
+                }
+                .skillsCont{
+                    .skillsSub{
+                        @include displayFlex($jtfCont:space-between);
+                        flex-wrap: wrap;
+                        margin-bottom:0;
+                        width:100%;
+                        .myProg{
+                            width: 130px;
+                            height: 130px;
+                            margin: 0 10px 30px 0px;
+                        }                   
+                        }
+                    }
+                }
+            }
+        }
+        /*Work Experience */
+            .workExp{
+                @include displayFlex ($flxDir:column);
+                @include paddingX4($top:$titPadding90, $bottom:$titPadding90);
+                text-align:center;
+                .secExp1{
+                    width: 50%;
+                    .title2{
+                        @include h2Title ($fntS:$tit900);
+                    }
+                    }
+                .secExp2{
+                    @include displayFlex ($flxDir:column);
+                    gap: 30px;
+                    width: 100%;
+                    height: 100%;
+                    .work{
+                        @include displayFlex ($jtfCont:space-around);
+                        background-color: $dark-2-color;
+                        border-radius: 10px;
+                        color: $light-1-color;
+                        width: 100%;
+                        height: 120px;
+                        h3{
+                            font-weight: 600;
+                            font-size: 35px;
+                        }
+                        img{
+                            width:90px;
+                        }
+                        p{
+                            color: $red-color;
+                            font-size: 15px;
+                        }
+                        a{
+                            color: $light-1-color;
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+}
+}
 
  /*Media Queries 1200px*/
-
 @media (min-width: 1200px ) {
+    body{
     .aboutMe{   
          .subAboutMe{
-            @include paddingX4( $top:200, $bottom:130px);
             @include displayFlex ($jtfCont:space-around);
             height: 100vh;
             .sec1{
                 .bigCard{
-                    height: 450px;
-                    width: 350px;
-                    padding-top: $titPadding;
+                    width: 60%;
+                    height:450px;
                 }
                 .litCard{
-                    top: 330px;
-                    right: 150px;    
+                    top:65%;
+                    left:30%;
                 }
             }
             .sec2{
@@ -272,9 +399,11 @@ body{
                 }
                 .skillsCont{
                     .skillsSub{
+
                         .myProg{
                             width: 180px;
                             height: 180px;
+                            margin: 20px auto;
                         }                     
                         }
                     }
@@ -283,25 +412,13 @@ body{
         }
     /*Work Experience */
         .workExp{
-            background: radial-gradient(circle at center center, $red-color 0% , $dark-1-color 55%);
-            height: 110vh;
-            // @include displayFlex ($flxDir:column);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            .secExp1{padding-top: 150px;
-                color: $light-1-color;
-                width: 40%;
-                .title2{
-                    @include h2Title;
-                }
+            .secExp1{
                 }
             .secExp2{
                 @include displayFlex ($flxDir:column);
                 gap: 30px;
                 width: 100%;
                 height: 100%;
-                padding-bottom: 100px;
                 .work{
                     @include displayFlex ($jtfCont:space-around);
                     background-color: $dark-2-color;
@@ -327,4 +444,5 @@ body{
                 }
             }
         }
+}
 }
